@@ -5,7 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Kashif Tech Solutions | Custom PCs & Corporate Solutions</title>
-  <meta name="description" content="Kashif Tech Solutions - Custom gaming PCs, PC components, workstations, upgrades and corporate bulk orders.">
+
+  <meta
+    name="description"
+    content="Kashif Tech Solutions - Custom gaming PCs, PC components, workstations, upgrades and corporate bulk orders in Islamabad and Rawalpindi."
+  >
 
   <style>
     * {
@@ -20,39 +24,38 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #07090d;
+      background: #06080c;
       color: #ffffff;
       line-height: 1.6;
     }
 
     a {
-      color: inherit;
       text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
+      color: inherit;
     }
 
     :root {
       --blue: #00a8ff;
-      --blue2: #0066ff;
-      --purple: #7c3cff;
-      --dark: #07090d;
-      --card: #10141c;
+      --blue-dark: #006cff;
+      --purple: #7b3cff;
+      --green: #25d366;
+      --dark: #06080c;
+      --card: #0e131b;
+      --card2: #111822;
       --border: rgba(255,255,255,0.09);
-      --muted: #a6afbd;
+      --text: #ffffff;
+      --muted: #9da8b7;
     }
 
-    /* NAVBAR */
+    /* ================= NAVBAR ================= */
+
     .navbar {
       position: fixed;
+      width: 100%;
       top: 0;
       left: 0;
-      width: 100%;
       z-index: 1000;
-      background: rgba(7,9,13,0.88);
+      background: rgba(6,8,12,0.88);
       backdrop-filter: blur(15px);
       border-bottom: 1px solid var(--border);
     }
@@ -67,7 +70,7 @@
     }
 
     .logo {
-      font-size: 21px;
+      font-size: 20px;
       font-weight: 900;
       letter-spacing: 1px;
     }
@@ -78,13 +81,13 @@
 
     .nav-links {
       display: flex;
-      gap: 28px;
-      list-style: none;
       align-items: center;
+      gap: 26px;
+      list-style: none;
     }
 
     .nav-links a {
-      color: #d9e0e9;
+      color: #d9e0e8;
       font-size: 14px;
       transition: 0.3s;
     }
@@ -93,10 +96,10 @@
       color: var(--blue);
     }
 
-    .nav-button {
-      background: linear-gradient(135deg, var(--blue), var(--purple));
+    .nav-contact {
       padding: 10px 17px;
       border-radius: 8px;
+      background: linear-gradient(135deg, var(--blue), var(--purple));
       color: white !important;
       font-weight: bold;
     }
@@ -107,52 +110,51 @@
       cursor: pointer;
     }
 
-    /* HERO */
+    /* ================= HERO ================= */
+
     .hero {
       min-height: 100vh;
       display: flex;
       align-items: center;
       position: relative;
       overflow: hidden;
-      background:
-        radial-gradient(circle at 75% 40%, rgba(0,168,255,0.17), transparent 30%),
-        radial-gradient(circle at 20% 70%, rgba(124,60,255,0.13), transparent 30%),
-        #07090d;
-    }
 
-    .hero::before {
-      content: "";
-      position: absolute;
-      width: 500px;
-      height: 500px;
-      border-radius: 50%;
-      background: rgba(0,168,255,0.08);
-      filter: blur(100px);
-      right: -150px;
-      top: 100px;
+      background:
+        radial-gradient(
+          circle at 75% 40%,
+          rgba(0,168,255,0.18),
+          transparent 32%
+        ),
+        radial-gradient(
+          circle at 15% 80%,
+          rgba(123,60,255,0.12),
+          transparent 30%
+        ),
+        #06080c;
     }
 
     .hero-container {
-      width: 100%;
       max-width: 1200px;
+      width: 100%;
       margin: auto;
-      padding: 130px 25px 80px;
+      padding: 140px 25px 80px;
+
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
-      gap: 60px;
+      gap: 50px;
       align-items: center;
-      position: relative;
-      z-index: 1;
     }
 
     .badge {
       display: inline-block;
       padding: 8px 14px;
-      border: 1px solid rgba(0,168,255,0.3);
-      background: rgba(0,168,255,0.08);
-      color: #55c5ff;
       border-radius: 50px;
-      font-size: 13px;
+      border: 1px solid rgba(0,168,255,0.3);
+      background: rgba(0,168,255,0.07);
+      color: #55c7ff;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 1px;
       margin-bottom: 20px;
     }
 
@@ -165,41 +167,41 @@
 
     .hero h1 span {
       color: var(--blue);
-      text-shadow: 0 0 35px rgba(0,168,255,0.25);
+      text-shadow: 0 0 40px rgba(0,168,255,0.25);
     }
 
     .hero p {
-      max-width: 650px;
       color: var(--muted);
       font-size: 18px;
-      margin-bottom: 32px;
+      max-width: 650px;
+      margin-bottom: 30px;
     }
 
     .buttons {
       display: flex;
-      gap: 15px;
+      gap: 14px;
       flex-wrap: wrap;
     }
 
     .btn {
       display: inline-flex;
-      align-items: center;
       justify-content: center;
-      padding: 14px 22px;
+      align-items: center;
+      padding: 14px 21px;
       border-radius: 9px;
+      border: 1px solid var(--border);
       font-weight: bold;
       transition: 0.3s;
-      border: 1px solid var(--border);
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--blue), var(--blue2));
-      box-shadow: 0 10px 35px rgba(0,168,255,0.2);
+      background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+      box-shadow: 0 10px 30px rgba(0,168,255,0.18);
     }
 
     .btn-primary:hover {
       transform: translateY(-3px);
-      box-shadow: 0 15px 40px rgba(0,168,255,0.35);
+      box-shadow: 0 15px 40px rgba(0,168,255,0.3);
     }
 
     .btn-outline {
@@ -207,13 +209,13 @@
     }
 
     .btn-outline:hover {
-      border-color: var(--blue);
       color: var(--blue);
+      border-color: var(--blue);
     }
 
-    /* PC VISUAL */
+    /* ================= PC GRAPHIC ================= */
+
     .pc-visual {
-      position: relative;
       height: 470px;
       display: flex;
       justify-content: center;
@@ -224,13 +226,21 @@
       width: 285px;
       height: 400px;
       border-radius: 18px;
-      border: 2px solid rgba(0,168,255,0.4);
+
       background:
-        linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.015)),
-        #0d1118;
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,0.08),
+          rgba(255,255,255,0.01)
+        ),
+        #0c1118;
+
+      border: 2px solid rgba(0,168,255,0.35);
+
       box-shadow:
-        0 0 70px rgba(0,168,255,0.12),
+        0 0 80px rgba(0,168,255,0.12),
         inset 0 0 40px rgba(0,168,255,0.04);
+
       position: relative;
       overflow: hidden;
     }
@@ -240,9 +250,11 @@
       left: 18px;
       right: 18px;
       top: 18px;
-      height: 260px;
+      height: 265px;
+
       border-radius: 12px;
       border: 1px solid rgba(255,255,255,0.08);
+
       background: rgba(0,0,0,0.25);
     }
 
@@ -250,36 +262,50 @@
       width: 82px;
       height: 82px;
       border-radius: 50%;
+
       border: 5px dotted #00bfff;
-      box-shadow: 0 0 25px #008cff;
+
+      box-shadow:
+        0 0 20px #008cff;
+
       position: absolute;
     }
 
     .fan.one {
-      top: 55px;
-      right: 35px;
+      top: 50px;
+      right: 30px;
     }
 
     .fan.two {
       top: 150px;
-      right: 35px;
+      right: 30px;
     }
 
     .fan.three {
-      top: 102px;
-      left: 35px;
+      top: 100px;
+      left: 30px;
     }
 
     .gpu {
       position: absolute;
-      left: 38px;
-      top: 185px;
+      left: 35px;
+      top: 190px;
+
       width: 135px;
       height: 45px;
-      background: linear-gradient(90deg, #171d27, #303a4a);
-      border: 1px solid #445166;
+
       border-radius: 5px;
-      box-shadow: 0 0 18px rgba(0,168,255,0.25);
+      border: 1px solid #455166;
+
+      background:
+        linear-gradient(
+          90deg,
+          #151b25,
+          #303b4b
+        );
+
+      box-shadow:
+        0 0 18px rgba(0,168,255,0.25);
     }
 
     .light {
@@ -287,11 +313,21 @@
       bottom: 0;
       width: 100%;
       height: 4px;
-      background: linear-gradient(90deg, transparent, #00a8ff, #7c3cff, transparent);
+
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          #00a8ff,
+          #7b3cff,
+          transparent
+        );
+
       box-shadow: 0 0 20px #00a8ff;
     }
 
-    /* SECTIONS */
+    /* ================= SECTIONS ================= */
+
     section {
       padding: 100px 25px;
     }
@@ -308,62 +344,73 @@
 
     .section-title small {
       color: var(--blue);
-      text-transform: uppercase;
-      letter-spacing: 3px;
       font-weight: bold;
+      letter-spacing: 3px;
+      text-transform: uppercase;
     }
 
     .section-title h2 {
       font-size: clamp(32px, 4vw, 50px);
-      margin-top: 10px;
+      margin-top: 8px;
     }
 
     .section-title p {
-      max-width: 650px;
-      margin: 15px auto 0;
       color: var(--muted);
+      max-width: 680px;
+      margin: 14px auto 0;
     }
 
-    /* SERVICES */
+    /* ================= SERVICES ================= */
+
     .services {
       background: #090c11;
     }
 
     .service-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3,1fr);
       gap: 20px;
     }
 
     .service-card {
-      background: linear-gradient(145deg, #111722, #0c1017);
-      border: 1px solid var(--border);
-      border-radius: 16px;
       padding: 30px;
+      border-radius: 16px;
+
+      background:
+        linear-gradient(
+          145deg,
+          #111722,
+          #0c1017
+        );
+
+      border: 1px solid var(--border);
+
       transition: 0.3s;
     }
 
     .service-card:hover {
       transform: translateY(-8px);
       border-color: rgba(0,168,255,0.45);
-      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
     }
 
     .icon {
       width: 55px;
       height: 55px;
+
       display: flex;
-      align-items: center;
       justify-content: center;
-      background: rgba(0,168,255,0.1);
+      align-items: center;
+
       border-radius: 12px;
+
+      background: rgba(0,168,255,0.1);
+
       font-size: 27px;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
     .service-card h3 {
-      margin-bottom: 10px;
-      font-size: 20px;
+      margin-bottom: 8px;
     }
 
     .service-card p {
@@ -371,83 +418,108 @@
       font-size: 14px;
     }
 
-    /* BUILDS */
+    /* ================= BUILDS ================= */
+
     .build-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3,1fr);
       gap: 22px;
     }
 
     .build-card {
+      overflow: hidden;
+      border-radius: 16px;
       background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 16px;
-      overflow: hidden;
       transition: 0.3s;
     }
 
     .build-card:hover {
       transform: translateY(-7px);
-      border-color: rgba(124,60,255,0.5);
+      border-color: rgba(123,60,255,0.5);
     }
 
     .build-image {
       height: 190px;
-      background:
-        radial-gradient(circle at center, rgba(0,168,255,0.2), transparent 45%),
-        linear-gradient(135deg, #111827, #05070a);
+
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
+
       font-size: 65px;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(0,168,255,0.2),
+          transparent 45%
+        ),
+        linear-gradient(
+          135deg,
+          #111827,
+          #05070a
+        );
     }
 
     .build-content {
       padding: 25px;
     }
 
-    .build-content h3 {
-      margin-bottom: 8px;
-    }
-
     .build-content p {
       color: var(--muted);
       font-size: 14px;
-      margin-bottom: 15px;
+      margin: 8px 0 15px;
     }
 
     .tag {
       display: inline-block;
-      font-size: 12px;
-      padding: 6px 10px;
-      border-radius: 5px;
-      background: rgba(0,168,255,0.1);
-      color: #53c5ff;
+      padding: 5px 9px;
       margin-right: 5px;
+
+      border-radius: 5px;
+
+      color: #55c7ff;
+      background: rgba(0,168,255,0.1);
+
+      font-size: 11px;
     }
 
-    /* CORPORATE */
+    /* ================= CORPORATE ================= */
+
     .corporate {
       background:
-        radial-gradient(circle at 80% 50%, rgba(124,60,255,0.13), transparent 35%),
+        radial-gradient(
+          circle at 80% 50%,
+          rgba(123,60,255,0.13),
+          transparent 35%
+        ),
         #090c11;
     }
 
     .corporate-box {
-      border: 1px solid rgba(0,168,255,0.2);
-      background: linear-gradient(135deg, rgba(0,168,255,0.08), rgba(124,60,255,0.06));
-      border-radius: 22px;
       padding: 55px;
+
+      border-radius: 22px;
+
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 50px;
       align-items: center;
+
+      border: 1px solid rgba(0,168,255,0.2);
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(0,168,255,0.07),
+          rgba(123,60,255,0.06)
+        );
     }
 
     .corporate-box h2 {
       font-size: 42px;
       line-height: 1.1;
-      margin-bottom: 20px;
+      margin: 15px 0 20px;
     }
 
     .corporate-box p {
@@ -459,19 +531,19 @@
     }
 
     .corporate-list li {
-      padding: 14px 0;
+      padding: 13px 0;
       border-bottom: 1px solid var(--border);
-      color: #dce3ed;
     }
 
     .corporate-list li::before {
       content: "✓";
       color: var(--blue);
-      font-weight: bold;
       margin-right: 12px;
+      font-weight: bold;
     }
 
-    /* ABOUT */
+    /* ================= ABOUT ================= */
+
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -487,26 +559,26 @@
 
     .about p {
       color: var(--muted);
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
     .stats {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2,1fr);
       gap: 15px;
     }
 
     .stat {
+      padding: 25px;
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 14px;
-      padding: 25px;
     }
 
     .stat strong {
       display: block;
-      font-size: 30px;
       color: var(--blue);
+      font-size: 30px;
     }
 
     .stat span {
@@ -514,50 +586,120 @@
       font-size: 13px;
     }
 
-    /* CONTACT */
+    /* ================= CONTACT ================= */
+
     .contact {
       background: #090c11;
     }
 
-    .contact-grid {
+    .representatives {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 25px;
+      grid-template-columns: repeat(3,1fr);
+      gap: 20px;
+      margin-bottom: 55px;
     }
 
-    .contact-card {
+    .representative {
+      padding: 30px;
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 16px;
-      padding: 30px;
     }
 
-    .contact-card h3 {
+    .representative h3 {
+      font-size: 21px;
+      margin-bottom: 5px;
+    }
+
+    .representative p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .number {
+      display: block;
+      color: var(--blue);
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .contact-buttons {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .small-btn {
+      padding: 9px 12px;
+      border-radius: 7px;
+      font-size: 12px;
+      font-weight: bold;
+      background: #151b24;
+      border: 1px solid var(--border);
+    }
+
+    .small-btn:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+
+    .whatsapp-btn {
+      background: #25d366;
+      border-color: #25d366;
+      color: white;
+    }
+
+    .locations {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 20px;
+    }
+
+    .location-card {
+      padding: 30px;
+      border-radius: 16px;
+      background:
+        linear-gradient(
+          145deg,
+          #111722,
+          #0b0f15
+        );
+      border: 1px solid var(--border);
+    }
+
+    .location-icon {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    .location-card h3 {
       margin-bottom: 8px;
     }
 
-    .contact-card p {
+    .location-card p {
       color: var(--muted);
       margin-bottom: 18px;
     }
 
-    .phone {
-      color: var(--blue);
-      font-size: 22px;
-      font-weight: bold;
-    }
+    /* ================= CTA ================= */
 
-    /* CTA */
     .cta {
       text-align: center;
       padding: 90px 25px;
+
       background:
-        radial-gradient(circle, rgba(0,168,255,0.14), transparent 45%),
-        #07090d;
+        radial-gradient(
+          circle,
+          rgba(0,168,255,0.14),
+          transparent 45%
+        ),
+        #06080c;
     }
 
     .cta h2 {
-      font-size: clamp(32px, 5vw, 58px);
+      font-size: clamp(32px,5vw,58px);
       margin-bottom: 15px;
     }
 
@@ -566,66 +708,87 @@
       margin-bottom: 30px;
     }
 
-    /* FOOTER */
+    /* ================= FOOTER ================= */
+
     footer {
-      padding: 35px 25px;
+      background: #040609;
       border-top: 1px solid var(--border);
-      background: #05070a;
+      padding: 35px 25px;
     }
 
     .footer-inner {
       max-width: 1200px;
       margin: auto;
+
       display: flex;
       justify-content: space-between;
-      gap: 20px;
       align-items: center;
+      gap: 20px;
     }
 
     footer p {
-      color: #798392;
-      font-size: 13px;
+      color: #737e8c;
+      font-size: 12px;
     }
 
     .facebook {
-      color: #55c5ff;
+      color: #55c7ff;
+      font-size: 13px;
     }
 
-    /* WHATSAPP */
-    .whatsapp {
+    /* ================= FLOATING WHATSAPP ================= */
+
+    .floating-whatsapp {
       position: fixed;
       right: 22px;
       bottom: 22px;
+
       width: 58px;
       height: 58px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
       border-radius: 50%;
+
       background: #25d366;
       color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+
       font-size: 27px;
+
       z-index: 999;
-      box-shadow: 0 8px 30px rgba(37,211,102,0.35);
+
+      box-shadow:
+        0 8px 30px rgba(37,211,102,0.35);
+
       transition: 0.3s;
     }
 
-    .whatsapp:hover {
+    .floating-whatsapp:hover {
       transform: scale(1.1);
     }
 
-    /* MOBILE */
-    @media (max-width: 850px) {
+    /* ================= MOBILE ================= */
+
+    @media(max-width:850px) {
+
       .nav-links {
         display: none;
+
         position: absolute;
         top: 68px;
         left: 0;
+
         width: 100%;
+
         padding: 20px 25px;
+
         background: #080b10;
+
         flex-direction: column;
         align-items: flex-start;
+
         border-bottom: 1px solid var(--border);
       }
 
@@ -639,14 +802,13 @@
 
       .hero-container,
       .corporate-box,
-      .about-grid,
-      .contact-grid {
+      .about-grid {
         grid-template-columns: 1fr;
       }
 
       .hero-container {
-        padding-top: 120px;
         text-align: center;
+        padding-top: 120px;
       }
 
       .hero p {
@@ -667,18 +829,25 @@
         grid-template-columns: 1fr 1fr;
       }
 
+      .representatives {
+        grid-template-columns: 1fr 1fr;
+      }
+
       .corporate-box {
         padding: 35px;
       }
     }
 
-    @media (max-width: 560px) {
+    @media(max-width:560px) {
+
       .hero h1 {
-        font-size: 46px;
+        font-size: 45px;
       }
 
       .service-grid,
-      .build-grid {
+      .build-grid,
+      .representatives,
+      .locations {
         grid-template-columns: 1fr;
       }
 
@@ -699,37 +868,73 @@
   </style>
 </head>
 
+
 <body>
 
-  <!-- NAVIGATION -->
+  <!-- ================= NAVIGATION ================= -->
+
   <header class="navbar">
+
     <div class="nav-container">
 
       <a href="#home" class="logo">
         KASHIF <span>TECH</span> SOLUTIONS
       </a>
 
-      <div class="menu" onclick="toggleMenu()">☰</div>
+      <div class="menu" onclick="toggleMenu()">
+        ☰
+      </div>
 
       <ul class="nav-links" id="navLinks">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#builds">Builds</a></li>
-        <li><a href="#corporate">Corporate</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact" class="nav-button">Contact Us</a></li>
+
+        <li>
+          <a href="#home">Home</a>
+        </li>
+
+        <li>
+          <a href="#services">Services</a>
+        </li>
+
+        <li>
+          <a href="#builds">Builds</a>
+        </li>
+
+        <li>
+          <a href="#corporate">Corporate</a>
+        </li>
+
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+
+        <li>
+          <a
+            href="https://www.facebook.com/p/Gaming-PC-Zone-61554983427077/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Facebook
+          </a>
+        </li>
+
       </ul>
 
     </div>
+
   </header>
 
 
-  <!-- HERO -->
+  <!-- ================= HERO ================= -->
+
   <section class="hero" id="home">
+
     <div class="hero-container">
 
       <div>
-        <div class="badge">CUSTOM PC • GAMING • CORPORATE SOLUTIONS</div>
+
+        <div class="badge">
+          CUSTOM PC • GAMING • CORPORATE SOLUTIONS
+        </div>
 
         <h1>
           BUILD YOUR<br>
@@ -743,179 +948,278 @@
         </p>
 
         <div class="buttons">
-          <a class="btn btn-primary" href="#contact">
-            Get a Custom Quote
+
+          <a
+            href="#contact"
+            class="btn btn-primary"
+          >
+            Get A Custom Quote
           </a>
 
-          <a class="btn btn-outline" href="#builds">
+          <a
+            href="#builds"
+            class="btn btn-outline"
+          >
             Explore Builds
           </a>
+
         </div>
+
       </div>
 
 
-      <!-- CSS PC -->
       <div class="pc-visual">
+
         <div class="pc-case">
 
           <div class="glass">
+
             <div class="fan one"></div>
             <div class="fan two"></div>
             <div class="fan three"></div>
+
             <div class="gpu"></div>
+
           </div>
 
           <div class="light"></div>
 
         </div>
+
       </div>
 
     </div>
+
   </section>
 
 
-  <!-- SERVICES -->
+  <!-- ================= SERVICES ================= -->
+
   <section class="services" id="services">
+
     <div class="container">
 
       <div class="section-title">
-        <small>What We Do</small>
+
+        <small>Our Services</small>
+
         <h2>Technology Built Around You</h2>
+
         <p>
           From gaming machines to professional business systems,
           we help you choose the right hardware for your needs.
         </p>
+
       </div>
+
 
       <div class="service-grid">
 
+
         <div class="service-card">
+
           <div class="icon">🎮</div>
+
           <h3>Gaming PCs</h3>
+
           <p>
             High-performance gaming PCs configured for smooth
-            gameplay, streaming and competitive gaming.
+            gaming, streaming and competitive performance.
           </p>
+
         </div>
 
+
         <div class="service-card">
+
           <div class="icon">🖥️</div>
+
           <h3>Custom PC Builds</h3>
+
           <p>
-            Fully customized systems based on your budget,
-            performance requirements and future upgrade plans.
+            Customized systems based on your budget,
+            performance requirements and future upgrades.
           </p>
+
         </div>
 
+
         <div class="service-card">
+
           <div class="icon">⚙️</div>
+
           <h3>PC Components</h3>
+
           <p>
-            Processors, graphics cards, RAM, SSDs, motherboards,
-            power supplies, cases and other computer hardware.
+            Processors, graphics cards, RAM, SSDs,
+            motherboards, power supplies, cases and more.
           </p>
+
         </div>
 
+
         <div class="service-card">
+
           <div class="icon">💼</div>
+
           <h3>Workstations</h3>
+
           <p>
-            Powerful systems for design, development, rendering,
-            engineering, productivity and professional workloads.
+            Powerful computers for design, development,
+            rendering, engineering and professional work.
           </p>
+
         </div>
 
+
         <div class="service-card">
+
           <div class="icon">🔧</div>
-          <h3>Upgrades</h3>
+
+          <h3>PC Upgrades</h3>
+
           <p>
-            Upgrade your existing computer with better storage,
+            Improve your existing PC with better storage,
             memory, graphics and processing performance.
           </p>
+
         </div>
 
+
         <div class="service-card">
+
           <div class="icon">🏢</div>
+
           <h3>Corporate Solutions</h3>
+
           <p>
             Computer systems and components for offices,
-            businesses, institutions and bulk requirements.
+            companies, institutions and bulk requirements.
           </p>
+
         </div>
 
       </div>
+
     </div>
+
   </section>
 
 
-  <!-- BUILDS -->
+  <!-- ================= BUILDS ================= -->
+
   <section id="builds">
+
     <div class="container">
 
       <div class="section-title">
+
         <small>Our Portfolio</small>
-        <h2>Custom Builds</h2>
+
+        <h2>Custom PC Builds</h2>
+
         <p>
           Tell us your budget and requirements and we can
           configure a system around your needs.
         </p>
+
       </div>
+
 
       <div class="build-grid">
 
+
         <div class="build-card">
-          <div class="build-image">🎮</div>
+
+          <div class="build-image">
+            🎮
+          </div>
+
           <div class="build-content">
+
             <h3>Starter Gaming</h3>
+
             <p>
-              An affordable gaming-focused configuration
-              designed for everyday gaming and entertainment.
+              Affordable gaming configuration for everyday
+              gaming and entertainment.
             </p>
+
             <span class="tag">Gaming</span>
             <span class="tag">1080p</span>
+
           </div>
+
         </div>
 
+
         <div class="build-card">
-          <div class="build-image">⚡</div>
+
+          <div class="build-image">
+            ⚡
+          </div>
+
           <div class="build-content">
+
             <h3>Performance Gaming</h3>
+
             <p>
-              A balanced high-performance system for demanding
-              games, streaming and content creation.
+              Balanced high-performance system for gaming,
+              streaming and content creation.
             </p>
+
             <span class="tag">Performance</span>
             <span class="tag">Gaming</span>
+
           </div>
+
         </div>
 
+
         <div class="build-card">
-          <div class="build-image">🔥</div>
+
+          <div class="build-image">
+            🔥
+          </div>
+
           <div class="build-content">
+
             <h3>Enthusiast Build</h3>
+
             <p>
               Premium hardware for users who want maximum
-              performance and a powerful custom setup.
+              performance from a custom setup.
             </p>
+
             <span class="tag">High-End</span>
             <span class="tag">Custom</span>
+
           </div>
+
         </div>
 
       </div>
 
     </div>
+
   </section>
 
 
-  <!-- CORPORATE -->
+  <!-- ================= CORPORATE ================= -->
+
   <section class="corporate" id="corporate">
+
     <div class="container">
 
       <div class="corporate-box">
 
+
         <div>
-          <small style="color:#00a8ff; font-weight:bold; letter-spacing:2px;">
+
+          <small style="
+            color:#00a8ff;
+            font-weight:bold;
+            letter-spacing:2px;
+          ">
             CORPORATE & BULK ORDERS
           </small>
 
@@ -924,56 +1228,84 @@
           </h2>
 
           <p>
-            We also deal in corporate orders and bulk computer
-            requirements. Whether you need systems for an office,
-            company, school, organization or project, we can help
-            configure the right hardware for your requirements.
+            We also deal in corporate orders and bulk
+            computer requirements. Whether you need systems
+            for an office, company, school, organization or
+            project, we can help configure the right hardware
+            for your requirements.
           </p>
 
           <br>
 
-          <a href="#contact" class="btn btn-primary">
+          <a
+            href="https://wa.me/923449350866?text=Hello%20Kashif%20Tech%20Solutions%2C%20I%20am%20interested%20in%20a%20corporate%20or%20bulk%20order."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+          >
             Request Corporate Quote
           </a>
+
         </div>
 
+
         <div>
+
           <ul class="corporate-list">
+
             <li>Bulk PC & workstation orders</li>
+
             <li>Office computer systems</li>
+
             <li>Corporate hardware requirements</li>
+
             <li>Custom configurations</li>
+
             <li>PC components in quantity</li>
+
             <li>Professional hardware guidance</li>
+
           </ul>
+
         </div>
 
       </div>
 
     </div>
+
   </section>
 
 
-  <!-- ABOUT -->
+  <!-- ================= ABOUT ================= -->
+
   <section class="about" id="about">
+
     <div class="container">
 
       <div class="about-grid">
 
+
         <div>
-          <div class="section-title" style="text-align:left; margin-bottom:20px;">
+
+          <div class="section-title"
+               style="text-align:left; margin-bottom:20px;">
+
             <small>About Us</small>
+
           </div>
 
           <h2>
             Performance.<br>
-            Quality. <span style="color:#00a8ff;">Solutions.</span>
+            Quality.
+            <span style="color:#00a8ff;">
+              Solutions.
+            </span>
           </h2>
 
           <p>
             Kashif Tech Solutions specializes in custom-built
-            computers, gaming systems, computer components and
-            professional technology solutions.
+            computers, gaming systems, computer components
+            and professional technology solutions.
           </p>
 
           <p>
@@ -987,9 +1319,11 @@
             rel="noopener noreferrer"
             class="btn btn-outline"
           >
-            Visit Our Gaming PC Zone
+            Visit Gaming PC Zone
           </a>
+
         </div>
+
 
         <div class="stats">
 
@@ -1018,83 +1352,240 @@
       </div>
 
     </div>
+
   </section>
 
 
-  <!-- CONTACT -->
+  <!-- ================= CONTACT ================= -->
+
   <section class="contact" id="contact">
+
     <div class="container">
 
       <div class="section-title">
+
         <small>Get In Touch</small>
-        <h2>Let's Build Something Powerful</h2>
+
+        <h2>Contact Our Team</h2>
+
         <p>
           Contact us for custom PC builds, components,
           upgrades or corporate requirements.
         </p>
+
       </div>
 
-      <div class="contact-grid">
 
-        <div class="contact-card">
+      <!-- REPRESENTATIVES -->
+
+      <div class="representatives">
+
+
+        <!-- KASHAN -->
+
+        <div class="representative">
+
           <h3>Kashan Zulfiqar</h3>
-          <p>Representative — Kashif Tech Solutions</p>
+
+          <p>
+            Representative — Kashif Tech Solutions
+          </p>
 
           <a
-            class="phone"
             href="tel:+923343465500"
+            class="number"
           >
             0334 3465500
           </a>
 
-          <br><br>
+          <div class="contact-buttons">
 
-          <a
-            class="btn btn-primary"
-            href="https://wa.me/923343465500"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            WhatsApp Kashan
-          </a>
+            <a
+              href="https://wa.me/923343465500?text=Hello%20Kashan%2C%20I%20am%20interested%20in%20Kashif%20Tech%20Solutions."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="small-btn whatsapp-btn"
+            >
+              WhatsApp
+            </a>
+
+            <a
+              href="tel:+923343465500"
+              class="small-btn"
+            >
+              Call
+            </a>
+
+          </div>
+
         </div>
 
 
-        <div class="contact-card">
+        <!-- KASHIF -->
+
+        <div class="representative">
+
           <h3>Kashif</h3>
-          <p>Representative — Kashif Tech Solutions</p>
+
+          <p>
+            Representative — Kashif Tech Solutions
+          </p>
 
           <a
-            class="phone"
             href="tel:+923449350866"
+            class="number"
           >
             0344 9350866
           </a>
 
-          <br><br>
+          <div class="contact-buttons">
+
+            <a
+              href="https://wa.me/923449350866?text=Hello%20Kashif%2C%20I%20am%20interested%20in%20Kashif%20Tech%20Solutions."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="small-btn whatsapp-btn"
+            >
+              WhatsApp
+            </a>
+
+            <a
+              href="tel:+923449350866"
+              class="small-btn"
+            >
+              Call
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- UZAIR -->
+
+        <div class="representative">
+
+          <h3>Uzair Farooq</h3>
+
+          <p>
+            Representative — Kashif Tech Solutions
+          </p>
 
           <a
-            class="btn btn-primary"
-            href="https://wa.me/923449350866"
+            href="tel:+923423142651"
+            class="number"
+          >
+            0342 3142651
+          </a>
+
+          <div class="contact-buttons">
+
+            <a
+              href="https://wa.me/923423142651?text=Hello%20Uzair%2C%20I%20am%20interested%20in%20Kashif%20Tech%20Solutions."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="small-btn whatsapp-btn"
+            >
+              WhatsApp
+            </a>
+
+            <a
+              href="tel:+923423142651"
+              class="small-btn"
+            >
+              Call
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- LOCATIONS -->
+
+      <div class="section-title">
+
+        <small>Find Us</small>
+
+        <h2>Our Locations</h2>
+
+      </div>
+
+
+      <div class="locations">
+
+
+        <!-- ISLAMABAD -->
+
+        <div class="location-card">
+
+          <div class="location-icon">
+            📍
+          </div>
+
+          <h3>Islamabad</h3>
+
+          <p>
+            Ghauri Town Phase 4A,<br>
+            Street 40, Islamabad
+          </p>
+
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Ghauri%20Town%20Phase%204A%20Street%2040%20Islamabad"
             target="_blank"
             rel="noopener noreferrer"
+            class="btn btn-outline"
           >
-            WhatsApp Kashif
+            Open In Google Maps
           </a>
+
+        </div>
+
+
+        <!-- RAWALPINDI -->
+
+        <div class="location-card">
+
+          <div class="location-icon">
+            📍
+          </div>
+
+          <h3>Rawalpindi</h3>
+
+          <p>
+            Masjid Tayyaba,<br>
+            Rawat Town, Rawalpindi
+          </p>
+
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Masjid%20Tayyaba%20Rawat%20Town%20Rawalpindi"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-outline"
+          >
+            Open In Google Maps
+          </a>
+
         </div>
 
       </div>
 
     </div>
+
   </section>
 
 
-  <!-- CTA -->
+  <!-- ================= CTA ================= -->
+
   <section class="cta">
 
     <div class="container">
 
-      <h2>Ready To Build Your PC?</h2>
+      <h2>
+        Ready To Build Your PC?
+      </h2>
 
       <p>
         Tell us your budget, requirements and performance goals.
@@ -1103,7 +1594,7 @@
       <div class="buttons">
 
         <a
-          href="https://wa.me/9233449350866?text=Hello%20Kashif%20Tech%20Solutions%2C%20I%20would%20like%20a%20custom%20PC%20quote."
+          href="https://wa.me/923449350866?text=Hello%20Kashif%20Tech%20Solutions%2C%20I%20would%20like%20a%20custom%20PC%20quote."
           target="_blank"
           rel="noopener noreferrer"
           class="btn btn-primary"
@@ -1111,7 +1602,10 @@
           WhatsApp For A Quote
         </a>
 
-        <a href="#contact" class="btn btn-outline">
+        <a
+          href="#contact"
+          class="btn btn-outline"
+        >
           Contact Us
         </a>
 
@@ -1122,15 +1616,28 @@
   </section>
 
 
-  <!-- FOOTER -->
+  <!-- ================= FOOTER ================= -->
+
   <footer>
 
     <div class="footer-inner">
 
       <div>
-        <strong>KASHIF <span style="color:#00a8ff;">TECH</span> SOLUTIONS</strong>
-        <p>Custom PCs • Gaming • Components • Corporate Solutions</p>
+
+        <strong>
+          KASHIF
+          <span style="color:#00a8ff;">
+            TECH
+          </span>
+          SOLUTIONS
+        </strong>
+
+        <p>
+          Custom PCs • Gaming • Components • Corporate Solutions
+        </p>
+
       </div>
+
 
       <a
         class="facebook"
@@ -1141,8 +1648,9 @@
         Gaming PC Zone on Facebook →
       </a>
 
+
       <p>
-        © 2026 Kashif Tech Solutions. All rights reserved.
+        © 2026 Kashif Tech Solutions
       </p>
 
     </div>
@@ -1150,10 +1658,11 @@
   </footer>
 
 
-  <!-- FLOATING WHATSAPP -->
+  <!-- ================= FLOATING WHATSAPP ================= -->
+
   <a
-    class="whatsapp"
-    href="https://wa.me/923449350866?text=Hello%20Kashif%20Tech%20Solutions%2C%20I%20want%20to%20know%20about%20your%20PC%20builds."
+    class="floating-whatsapp"
+    href="https://wa.me/923449350866?text=Hello%20Kashif%20Tech%20Solutions%2C%20I%20want%20to know%20about%20your%20PC%20builds."
     target="_blank"
     rel="noopener noreferrer"
     aria-label="WhatsApp"
@@ -1162,18 +1671,35 @@
   </a>
 
 
-  <!-- JAVASCRIPT -->
+  <!-- ================= JAVASCRIPT ================= -->
+
   <script>
+
     function toggleMenu() {
-      const nav = document.getElementById("navLinks");
+
+      const nav =
+        document.getElementById("navLinks");
+
       nav.classList.toggle("active");
+
     }
 
-    document.querySelectorAll(".nav-links a").forEach(function(link) {
-      link.addEventListener("click", function() {
-        document.getElementById("navLinks").classList.remove("active");
+
+    document
+      .querySelectorAll(".nav-links a")
+      .forEach(function(link) {
+
+        link.addEventListener("click", function() {
+
+          document
+            .getElementById("navLinks")
+            .classList
+            .remove("active");
+
+        });
+
       });
-    });
+
   </script>
 
 </body>

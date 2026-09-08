@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kashif Tech Solutions</title>
-    <!-- Google Fonts for Tech/Gaming Aesthetic -->
+    <title>Kashif Tech Solutions | Custom Gaming PCs & Components</title>
+    <!-- Google Fonts for Elite Gaming Aesthetic -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
@@ -13,12 +13,14 @@
     
     <style>
         :root {
-            --bg-color: #0d0e12;
-            --card-bg: #161920;
+            --bg-color: #08090c;
+            --card-bg: #12151c;
             --accent-cyan: #00f0ff;
             --accent-pink: #ff007f;
+            --accent-orange: #ffaa00;
             --text-main: #ffffff;
             --text-muted: #a3a8b4;
+            --neon-glow: 0 0 15px rgba(0, 240, 255, 0.3);
         }
 
         * {
@@ -34,10 +36,16 @@
             overflow-x: hidden;
         }
 
-        /* Header & Navigation */
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #08090c; }
+        ::-webkit-scrollbar-thumb { background: #1f2430; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--accent-cyan); }
+
+        /* Header Navigation */
         header {
-            background: rgba(22, 25, 32, 0.8);
-            backdrop-filter: blur(10px);
+            background: rgba(18, 21, 28, 0.85);
+            backdrop-filter: blur(12px);
             border-bottom: 2px solid var(--accent-cyan);
             padding: 15px 5%;
             position: fixed;
@@ -47,14 +55,14 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.5);
         }
 
         .logo {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 700;
+            font-size: 1.6rem;
+            font-weight: 900;
             letter-spacing: 2px;
-            color: var(--text-main);
         }
 
         .logo span {
@@ -66,249 +74,268 @@
             background: linear-gradient(45deg, #1877f2, #00f0ff);
             color: white;
             text-decoration: none;
-            padding: 8px 20px;
+            padding: 10px 22px;
             border-radius: 5px;
-            font-weight: 600;
+            font-weight: 700;
+            font-size: 1rem;
             transition: 0.3s ease;
             display: flex;
             align-items: center;
             gap: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .fb-link-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.5);
         }
 
         /* Hero Section */
         .hero {
-            padding: 150px 5% 80px 5%;
+            padding: 180px 5% 100px 5%;
             text-align: center;
-            background: radial-gradient(circle at center, rgba(0,240,255,0.05) 0%, transparent 70%);
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+            background: radial-gradient(circle at center, rgba(0, 240, 255, 0.08) 0%, transparent 65%);
+            border-bottom: 1px solid rgba(255,255,255,0.03);
+            position: relative;
         }
 
         .hero h1 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 3.5rem;
+            font-size: 4rem;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 15px;
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+            line-height: 1.1;
         }
 
         .hero h1 span {
             color: var(--accent-pink);
-            text-shadow: 0 0 15px rgba(255, 0, 127, 0.4);
+            text-shadow: 0 0 20px rgba(255, 0, 127, 0.5);
         }
 
         .hero p {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             color: var(--text-muted);
-            max-width: 600px;
-            margin: 0 auto 30px auto;
+            max-width: 750px;
+            margin: 0 auto 35px auto;
+            font-weight: 500;
         }
 
-        /* Stock Section */
+        .hero-badges {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .badge i { color: var(--accent-cyan); }
+
+        /* Section Layouts */
         .section-title {
             text-align: center;
             font-family: 'Orbitron', sans-serif;
-            font-size: 2.2rem;
-            margin: 60px 0 30px 0;
+            font-size: 2.5rem;
+            margin: 80px 0 15px 0;
             text-transform: uppercase;
             letter-spacing: 2px;
         }
 
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         .section-title span {
             color: var(--accent-cyan);
+            text-shadow: var(--neon-glow);
         }
 
-        .grid-container {
+        /* --- STUFF UPGRADE 1: INTERACTIVE BUILDER WIDGET --- */
+        .interactive-builder {
+            max-width: 950px;
+            margin: 0 auto 60px auto;
+            background: var(--card-bg);
+            border: 1px solid rgba(0, 240, 255, 0.2);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .widget-layout {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            padding: 0 5% 60px 5%;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
         }
 
-        .item-card {
-            background-color: var(--card-bg);
-            border: 1px solid rgba(255,255,255,0.05);
-            border-radius: 8px;
-            padding: 20px;
-            text-align: center;
-            transition: 0.3s ease;
-            position: relative;
-            overflow: hidden;
+        @media (max-width: 768px) {
+            .widget-layout { grid-template-columns: 1fr; }
         }
 
-        .item-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 4px; height: 100%;
-            background: var(--accent-cyan);
-        }
-
-        .item-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent-cyan);
-            box-shadow: 0 5px 20px rgba(0, 240, 255, 0.1);
-        }
-
-        .item-card i {
-            font-size: 2.5rem;
-            color: var(--accent-cyan);
-            margin-bottom: 15px;
-        }
-
-        .item-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            letter-spacing: 1px;
-        }
-
-        .item-card p {
-            color: var(--text-muted);
-            font-size: 1rem;
-            line-height: 1.4;
-        }
-
-        /* Team Structure Section */
-        .team-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            padding: 0 5% 60px 5%;
-        }
-
-        .team-card {
-            background: linear-gradient(145deg, #161920, #1b202a);
-            border-radius: 8px;
-            padding: 25px;
-            text-align: center;
-            border-top: 3px solid var(--accent-pink);
-        }
-
-        .team-card h3 {
+        .widget-controls h3 {
             font-family: 'Orbitron', sans-serif;
             font-size: 1.4rem;
-            margin-bottom: 5px;
-        }
-
-        .team-role {
-            color: var(--accent-pink);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
             margin-bottom: 15px;
-            font-size: 0.9rem;
+            text-transform: uppercase;
         }
 
-        .contact-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: #25d366;
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-weight: 600;
-            margin-top: 10px;
-            transition: 0.3s ease;
-            width: 100%;
-            justify-content: center;
+        .control-group {
+            margin-bottom: 20px;
         }
 
-        .contact-btn:hover {
-            background: #20ba5a;
-            box-shadow: 0 0 10px rgba(37, 211, 102, 0.4);
-        }
-
-        /* Footer */
-        footer {
-            background-color: #090a0d;
-            text-align: center;
-            padding: 30px;
-            font-size: 0.9rem;
+        .control-group label {
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            text-transform: uppercase;
             color: var(--text-muted);
-            border-top: 1px solid rgba(255,255,255,0.05);
+            font-weight: 600;
         }
 
-        /* Responsive Fixes */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.3rem; }
-            header { padding: 15px 4%; }
-            .logo { font-size: 1.2rem; }
+        .selector-options {
+            display: flex;
+            gap: 10px;
         }
-    </style>
-</head>
-<body>
 
-    <!-- Header Navigation -->
-    <header>
-        <div class="logo">KashifTech<span>Solutions</span></div>
-        <a href="https://facebook.com" target="_blank" class="fb-link-btn">
-            <i class="fab fa-facebook"></i> Gaming PC Zone
-        </a>
-    </header>
+        .selector-btn {
+            flex: 1;
+            background: #1b202a;
+            border: 1px solid rgba(255,255,255,0.1);
+            color: white;
+            padding: 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: 0.2s ease;
+            text-transform: uppercase;
+        }
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Welcome to <span>Kashif Tech Solutions</span></h1>
-        <p>Your premium hardware hub for custom gaming builds, high-end computer components, and official tech solutions.</p>
-    </section>
+        .selector-btn.active {
+            background: rgba(0, 240, 255, 0.1);
+            border-color: var(--accent-cyan);
+            color: var(--accent-cyan);
+            box-shadow: inset 0 0 10px rgba(0,240,255,0.2);
+        }
 
-    <!-- Services & Products Matrix -->
-    <h2 class="section-title">What We <span>Deal In</span></h2>
-    <div class="grid-container">
-        <div class="item-card">
-            <i class="fas fa-microchip"></i>
-            <h3>Processors & CPUs</h3>
-            <p>Fresh stock of top-tier desktop processors, optimized and ready for elite gaming performance.</p>
-        </div>
-        <div class="item-card">
-            <i class="fas fa-server"></i>
-            <h3>Premium Motherboards</h3>
-            <p>Reliable boards, multithreading components, and gaming units thoroughly tested for system stability.</p>
-        </div>
-        <div class="item-card">
-            <i class="fas fa-desktop"></i>
-            <h3>Casings & Fan Kits</h3>
-            <p>High-airflow visual setups equipped with controllable RGB fan kits to elevate your custom rig aesthetics.</p>
-        </div>
-    </div>
+        .widget-preview {
+            background: #090a0d;
+            border-radius: 8px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border: 1px dashed rgba(255,255,255,0.05);
+        }
 
-    <!-- Official Team Section -->
-    <h2 class="section-title">Connect With <span>Our Team</span></h2>
-    <div class="team-container">
-        <!-- CEO -->
-        <div class="team-card">
-            <h3>Kashan Zulfiqar</h3>
-            <div class="team-role">Chief Executive Officer</div>
-            <p>Overseeing business strategy and ensuring premium tech hardware delivery.</p>
-            <a href="https://wa.me" target="_blank" class="contact-btn">
-                <i class="fab fa-whatsapp"></i> Chat with CEO
-            </a>
-        </div>
-        <!-- Operations -->
-        <div class="team-card">
-            <h3>Uzair Farooq</h3>
-            <div class="team-role">Operations Management</div>
-            <p>Handling custom inventory log, localized distribution, and reliable shipping setups.</p>
-            <a href="https://wa.me" target="_blank" class="contact-btn">
-                <i class="fab fa-whatsapp"></i> Contact Operations
-            </a>
-        </div>
-        <!-- Marketing & Sales -->
-        <div class="team-card">
-            <h3>Kashif</h3>
-            <div class="team-role">Marketing & Sales</div>
-            <p>Your direct touchpoint for component quotation, bulk catalog orders, and general inquiries.</p>
-            <a href="https://wa.me" target="_blank" class="contact-btn">
-                <i class="fab fa-whatsapp"></i> Contact Sales
-            </a>
-        </div>
-    </div>
+        .pc-case-mockup {
+            width: 140px;
+            height: 180px;
+            margin: 0 auto 20px auto;
+            border: 4px solid #fff;
+            border-radius: 8px;
+            position: relative;
+            transition: 0.5s ease;
+            box-shadow: 0 0 25px rgba(255,255,255,0.1);
+        }
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Kashif Tech Solutions. All Rights Reserved.</p>
+        .pc-case-mockup::before {
+            content: 'RGB';
+            position: absolute;
+            top: 45%; left: 30%;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 900;
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        .perf-bar-wrapper {
+            margin-top: 10px;
+        }
+        .perf-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1rem;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+        .perf-track {
+            background: #222;
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .perf-fill {
+            height: 100%;
+            background: var(--accent-cyan);
+            width: 45%;
+            transition: 0.4s ease;
+        }
+
+        .widget-action-btn {
+            background: var(--accent-pink);
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 12px;
+            border-radius: 6px;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .widget-action-btn:hover {
+            background: #e0006c;
+            box-shadow: 0 0 15px rgba(255, 0, 127, 0.4);
+        }
+
+        /* --- STUFF UPGRADE 2: PRE-BUILT GAMING PC GRID --- */
+        .builds-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 0 5% 60px 5%;
+        }
+
+        .build-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255,255,255,0.04);
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            transition: 0.3s ease;
+        }
+
+        .build-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent-pink);
+            box-shadow: 0 8px 30px rgba(255, 0, 127, 0.15);
+        }
+
+        .build-badge {
+            position: absolute;

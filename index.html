@@ -3,314 +3,794 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kashif Tech Solutions | Custom PCs & Hardware Components</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cloudflare.com">
-    
+
+    <title>Kashif Tech Solutions | Custom PCs & Corporate IT Solutions</title>
+
+    <meta name="description"
+          content="Kashif Tech Solutions - Custom Gaming PCs, PC Components, Workstations, Upgrades and Corporate IT Solutions.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700;800;900&display=swap"
+          rel="stylesheet">
+
     <style>
+
+        /* ================================
+           GLOBAL
+        ================================= */
+
         :root {
-            --bg-main: #0f1219;
-            --bg-card: #161b26;
-            --accent-cyan: #00e5ff;
-            --accent-blue: #1877f2;
-            --text-white: #ffffff;
-            --text-gray: #94a3b8;
-            --border-line: #222938;
+            --bg: #05070b;
+            --bg2: #080c13;
+            --card: rgba(14, 19, 29, 0.78);
+            --card-solid: #0d131d;
+
+            --primary: #00e5ff;
+            --primary-dark: #00a9bd;
+            --purple: #8b5cf6;
+            --green: #25d366;
+
+            --text: #f5f7fb;
+            --muted: #8d99aa;
+            --border: rgba(255,255,255,0.08);
+
+            --shadow:
+                0 20px 60px rgba(0,0,0,.45);
+
+            --radius: 20px;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            background-color: var(--bg-main);
-            color: var(--text-white);
-            padding-top: 80px;
+            background:
+                radial-gradient(circle at 15% 10%, rgba(0,229,255,.08), transparent 25%),
+                radial-gradient(circle at 85% 25%, rgba(139,92,246,.08), transparent 25%),
+                var(--bg);
+
+            color: var(--text);
+            font-family: "Inter", sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        /* Navbar Header */
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: min(1180px, 92%);
+            margin: auto;
+        }
+
+        .section {
+            padding: 110px 0;
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-title span {
+            display: inline-block;
+            color: var(--primary);
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .section-title h2 {
+            font-family: "Orbitron", sans-serif;
+            font-size: clamp(30px, 4vw, 48px);
+            line-height: 1.15;
+            margin-bottom: 16px;
+        }
+
+        .section-title p {
+            color: var(--muted);
+            max-width: 650px;
+            margin: auto;
+        }
+
+        /* ================================
+           BACKGROUND EFFECTS
+        ================================= */
+
+        .grid-bg {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            opacity: .25;
+
+            background-image:
+                linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+
+            background-size: 55px 55px;
+
+            mask-image: linear-gradient(
+                to bottom,
+                black,
+                transparent 85%
+            );
+        }
+
+        .glow {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: .12;
+            pointer-events: none;
+        }
+
+        .glow.cyan {
+            background: var(--primary);
+        }
+
+        .glow.purple {
+            background: var(--purple);
+        }
+
+        /* ================================
+           NAVBAR
+        ================================= */
+
         header {
-            background: #0a0d14;
-            padding: 15px 5%;
             position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
-            top: 0; left: 0;
-            z-index: 1000;
+            z-index: 999;
+            transition: .3s;
+        }
+
+        header.scrolled {
+            background: rgba(5,7,11,.82);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        nav {
+            height: 82px;
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            border-bottom: 2px solid var(--accent-cyan);
+            justify-content: space-between;
         }
 
         .logo {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
 
-        .logo span { color: var(--accent-cyan); }
+        .logo-icon {
+            width: 43px;
+            height: 43px;
+            border-radius: 12px;
 
-        .fb-nav-btn {
-            background: var(--accent-blue);
+            display: grid;
+            place-items: center;
+
+            background:
+                linear-gradient(135deg,
+                    var(--primary),
+                    var(--purple));
+
+            color: #020409;
+            font-family: "Orbitron", sans-serif;
+            font-weight: 900;
+
+            box-shadow:
+                0 0 25px rgba(0,229,255,.25);
+        }
+
+        .logo-text {
+            font-family: "Orbitron", sans-serif;
+            font-size: 17px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .logo-text small {
+            display: block;
+            color: var(--primary);
+            font-family: "Inter", sans-serif;
+            font-size: 9px;
+            letter-spacing: 2px;
+            margin-top: -2px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #c7cfda;
+            font-size: 14px;
+            font-weight: 600;
+            transition: .25s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-cta {
+            padding: 11px 18px;
+            border-radius: 10px;
+            background: var(--primary);
+            color: #001014 !important;
+            font-weight: 800 !important;
+        }
+
+        .menu-btn {
+            display: none;
+            border: 0;
+            background: transparent;
             color: white;
-            text-decoration: none;
-            padding: 10px 18px;
-            border-radius: 6px;
-            font-weight: 700;
-            font-size: 0.95rem;
+            font-size: 26px;
+            cursor: pointer;
+        }
+
+        /* ================================
+           HERO
+        ================================= */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .hero-grid {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(5,7,11,.98) 0%,
+                    rgba(5,7,11,.88) 48%,
+                    rgba(5,7,11,.25) 100%
+                ),
+                url("https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=2000&q=85");
+
+            background-size: cover;
+            background-position: center;
+            opacity: .75;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 75% 50%,
+                    rgba(0,229,255,.13),
+                    transparent 30%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 760px;
+        }
+
+        .hero-badge {
             display: inline-flex;
             align-items: center;
             gap: 8px;
+
+            padding: 8px 14px;
+            border-radius: 100px;
+
+            background: rgba(0,229,255,.07);
+            border: 1px solid rgba(0,229,255,.2);
+
+            color: var(--primary);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
         }
 
-        /* Hero Banner */
-        .hero {
-            text-align: center;
-            padding: 60px 5%;
-            background: radial-gradient(circle at top, #1c2336 0%, #0f1219 100%);
-            border-bottom: 1px solid var(--border-line);
+        .status-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--green);
+            box-shadow: 0 0 10px var(--green);
         }
 
         .hero h1 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 3rem;
-            margin-bottom: 15px;
+            font-family: "Orbitron", sans-serif;
+            font-size: clamp(42px, 7vw, 78px);
+            line-height: 1.03;
+            letter-spacing: -2px;
+            margin-bottom: 25px;
         }
 
-        .hero h1 span { color: var(--accent-cyan); }
+        .hero h1 .cyan {
+            color: var(--primary);
+            text-shadow: 0 0 35px rgba(0,229,255,.2);
+        }
+
+        .hero h1 .purple {
+            color: #a78bfa;
+        }
 
         .hero p {
-            color: var(--text-gray);
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto;
+            color: #b2bccb;
+            font-size: 17px;
+            max-width: 650px;
+            margin-bottom: 34px;
         }
 
-        /* Sections and Grids */
-        .section-title {
-            text-align: center;
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 2.2rem;
-            margin: 50px 0 30px 0;
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 13px;
         }
 
-        .section-title span { color: var(--accent-cyan); }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
 
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            padding: 0 5% 40px 5%;
-        }
+            padding: 14px 22px;
+            border-radius: 11px;
 
-        /* Interactive Phone Revealer */
-        .revealer-card {
-            max-width: 600px;
-            margin: 0 auto 50px auto;
-            background: var(--bg-card);
-            border: 1px solid var(--border-line);
-            border-radius: 12px;
-            padding: 30px;
-            text-align: center;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-        }
+            font-size: 14px;
+            font-weight: 800;
 
-        .revealer-card h3 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-
-        .revealer-card p {
-            color: var(--text-gray);
-            margin-bottom: 20px;
-        }
-
-        .reveal-action-btn {
-            background: linear-gradient(135deg, var(--accent-cyan), #00a8ff);
-            color: #0f1219;
-            border: none;
-            padding: 14px 28px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            border-radius: 8px;
+            transition: .25s;
             cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: 0.2s ease;
+            border: 1px solid transparent;
         }
 
-        .reveal-action-btn:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 5px 15px rgba(0, 229, 255, 0.4);
+        .btn-primary {
+            color: #001014;
+            background: var(--primary);
+            box-shadow: 0 10px 35px rgba(0,229,255,.15);
         }
 
-        .hidden-number-box {
-            display: none;
-            margin-top: 15px;
-            padding: 15px;
-            background: #111520;
-            border: 2px dashed var(--accent-cyan);
-            border-radius: 6px;
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--accent-cyan);
-            animation: flashAnimation 1.5s infinite;
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            background: #35edff;
+            box-shadow: 0 15px 45px rgba(0,229,255,.25);
         }
 
-        @keyframes flashAnimation {
-            0% { opacity: 1; }
-            50% { opacity: 0.6; }
-            100% { opacity: 1; }
+        .btn-outline {
+            background: rgba(255,255,255,.04);
+            border-color: var(--border);
+            color: white;
         }
 
-        /* Component Inventory Blocks */
-        .item-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-line);
-            border-radius: 12px;
-            padding: 25px;
-            text-align: left;
-            transition: 0.3s ease;
-        }
-
-        .item-card:hover {
-            border-color: var(--accent-cyan);
+        .btn-outline:hover {
+            border-color: rgba(0,229,255,.4);
+            color: var(--primary);
             transform: translateY(-3px);
         }
 
-        .item-card i {
-            font-size: 2.2rem;
-            color: var(--accent-cyan);
-            margin-bottom: 15px;
+        .hero-stats {
+            display: flex;
+            gap: 38px;
+            margin-top: 60px;
         }
 
-        .item-card h4 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.3rem;
-            margin-bottom: 8px;
+        .hero-stat strong {
+            display: block;
+            font-family: "Orbitron", sans-serif;
+            font-size: 23px;
+            color: white;
         }
 
-        .item-card p {
-            color: var(--text-gray);
-            font-size: 0.95rem;
-            line-height: 1.5;
+        .hero-stat span {
+            color: var(--muted);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        /* Management Team Contacts */
-        .team-box {
-            background: var(--bg-card);
-            border-radius: 8px;
-            padding: 25px;
-            text-align: center;
-            border-top: 4px solid var(--accent-cyan);
+        /* ================================
+           SERVICES
+        ================================= */
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
         }
 
-        .team-box h3 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.4rem;
+        .service-card {
+            padding: 30px 24px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            background: linear-gradient(
+                145deg,
+                rgba(17,24,36,.85),
+                rgba(9,13,20,.75)
+            );
+
+            transition: .3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: var(--primary);
+            filter: blur(70px);
+            opacity: 0;
+            top: -50px;
+            right: -50px;
+            transition: .3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-7px);
+            border-color: rgba(0,229,255,.25);
+            box-shadow: var(--shadow);
+        }
+
+        .service-card:hover::before {
+            opacity: .13;
+        }
+
+        .service-icon {
+            width: 55px;
+            height: 55px;
+            display: grid;
+            place-items: center;
+            border-radius: 15px;
+
+            background: rgba(0,229,255,.08);
+            border: 1px solid rgba(0,229,255,.15);
+
+            color: var(--primary);
+            font-size: 24px;
+
+            margin-bottom: 22px;
+        }
+
+        .service-card h3 {
+            font-family: "Orbitron", sans-serif;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* ================================
+           BUILDS
+        ================================= */
+
+        .builds {
+            background: #070a10;
+        }
+
+        .build-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .build-card {
+            overflow: hidden;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            background: var(--card-solid);
+            transition: .3s;
+        }
+
+        .build-card:hover {
+            transform: translateY(-7px);
+            border-color: rgba(0,229,255,.3);
+        }
+
+        .build-image {
+            height: 230px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .build-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .5s;
+        }
+
+        .build-card:hover .build-image img {
+            transform: scale(1.06);
+        }
+
+        .build-tag {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+
+            background: rgba(0,0,0,.65);
+            backdrop-filter: blur(8px);
+
+            border: 1px solid rgba(255,255,255,.1);
+            padding: 6px 10px;
+            border-radius: 7px;
+
+            color: var(--primary);
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .build-info {
+            padding: 23px;
+        }
+
+        .build-info h3 {
+            font-family: "Orbitron", sans-serif;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .build-info p {
+            color: var(--muted);
+            font-size: 13px;
+            margin-bottom: 17px;
+        }
+
+        .specs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+        }
+
+        .spec {
+            padding: 6px 9px;
+            background: rgba(255,255,255,.04);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: #bfc8d5;
+            font-size: 10px;
+        }
+
+        /* ================================
+           ABOUT
+        ================================= */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-image {
+            height: 480px;
+            border-radius: 25px;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid var(--border);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-image::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(5,7,11,.8),
+                    transparent 55%
+                );
+        }
+
+        .about-badge {
+            position: absolute;
+            z-index: 2;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+
+            padding: 18px;
+            border-radius: 15px;
+
+            background: rgba(5,7,11,.75);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255,255,255,.1);
+        }
+
+        .about-badge strong {
+            display: block;
+            font-family: "Orbitron", sans-serif;
+            color: var(--primary);
             margin-bottom: 4px;
         }
 
-        .team-role {
-            color: var(--text-gray);
-            font-size: 0.9rem;
-            font-weight: 700;
+        .about-badge span {
+            color: #b6c0ce;
+            font-size: 12px;
+        }
+
+        .about-content span {
+            color: var(--primary);
             text-transform: uppercase;
-            margin-bottom: 15px;
+            letter-spacing: 3px;
+            font-size: 12px;
+            font-weight: 800;
         }
 
-        .wa-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: #25d366;
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 6px;
-            font-weight: 700;
-            width: 100%;
-            justify-content: center;
+        .about-content h2 {
+            font-family: "Orbitron", sans-serif;
+            font-size: clamp(30px, 4vw, 44px);
+            line-height: 1.15;
+            margin: 14px 0 20px;
         }
 
-        /* Footer */
-        footer {
-            background: #0a0d14;
-            text-align: center;
-            padding: 35px 20px;
-            color: var(--text-gray);
-            border-top: 1px solid var(--border-line);
-            margin-top: 40px;
+        .about-content h2 em {
+            color: var(--primary);
+            font-style: normal;
         }
-    </style>
-</head>
-<body>
 
-    <!-- Top Navigation Header -->
-    <header>
-        <div class="logo">KashifTech<span>Solutions</span></div>
-        <a href="https://facebook.com" target="_blank" class="fb-nav-btn">
-            <i class="fab fa-facebook"></i> Gaming PC Zone
-        </a>
-    </header>
+        .about-content > p {
+            color: var(--muted);
+            margin-bottom: 28px;
+        }
 
-    <!-- Main Title Banner -->
-    <section class="hero">
-        <h1>Premium Custom <span>Gaming PCs</span></h1>
-        <p>Your hardware supply channel for premium gaming rigs, advanced rendering boxes, and high-performance components inside Pakistan.</p>
-    </section>
+        .check-list {
+            display: grid;
+            gap: 13px;
+            margin-bottom: 30px;
+        }
 
-    <!-- REVEALER WIDGET FOR REVEALING PERSON NUMBER -->
-    <h2 class="section-title">Need Component <span>Pricing?</span></h2>
-    <div class="revealer-card">
-        <h3>Connect With Our Media Representative</h3>
-        <p>Click below to display the official mobile channel details for pricing catalogs and stock validation.</p>
-        <button class="reveal-action-btn" onclick="revealMediaChannel()">Show Phone Number</button>
-        <div class="hidden-number-box" id="mediaContactNumber">03449350866</div>
-    </div>
+        .check {
+            display: flex;
+            gap: 11px;
+            align-items: flex-start;
+            color: #cdd5df;
+            font-size: 13px;
+        }
 
-    <!-- INVENTORY CATEGORIES AND SECTIONS -->
-    <h2 class="section-title">Hardware <span>Inventory Categories</span></h2>
-    <div class="grid-container">
-        <!-- GPU Category -->
-        <div class="item-card">
-            <i class="fas fa-vr-cardboard"></i>
-            <h4>Graphics Cards (GPU)</h4>
-            <p>High-tier Nvidia GeForce RTX and AMD Radeon units available for crisp framerates and clean video renders.</p>
-        </div>
-        <!-- CPU Category -->
-        <div class="item-card">
-            <i class="fas fa-microchip"></i>
-            <h4>Processors (CPU)</h4>
-            <p>Premium multi-core desktop chips across contemporary AMD Ryzen or Intel Core platforms.</p>
-        </div>
-        <!-- RAM Category -->
-        <div class="item-card">
-            <i class="fas fa-memory"></i>
-            <h4>System Memory (RAM)</h4>
-            <p>High-frequency DDR4 and DDR5 gaming modules optimized for fluid multitasking stability.</p>
-        </div>
-        <!-- SSD Category -->
-        <div class="item-card">
-            <i class="fas fa-bolt"></i>
-            <h4>Solid State Drives (SSD)</h4>
-            <p>Ultra-speed M.2 NVMe solid-state options for instant operating system boot speeds and quick map loads.</p>
-        </div>
-        <!-- HDD Category -->
-        <div class="item-card">
-            <i class="fas fa-hdd"></i>
-            <h4>Hard Drives (HDD)</h4>
-            <p>Heavy-duty, high-capacity secondary storage solutions designed to secure huge gaming libraries.</p>
-        </div>
-        <!-- Cases Category -->
-        <div class="item-card">
-            <i class="fas fa-desktop"></i>
+        .check i {
+            color: var(--primary);
+            font-style: normal;
+            font-weight: 900;
+        }
+
+        /* ================================
+           CORPORATE
+        ================================= */
+
+        .corporate {
+            background:
+                radial-gradient(
+                    circle at 80% 50%,
+                    rgba(139,92,246,.13),
+                    transparent 35%
+                ),
+                #070a10;
+        }
+
+        .corporate-box {
+            border: 1px solid rgba(139,92,246,.2);
+            border-radius: 28px;
+            padding: 65px;
+            background:
+                linear-gradient(
+                    120deg,
+                    rgba(18,22,34,.95),
+                    rgba(10,13,21,.85)
+                );
+            position: relative;
+            overflow: hidden;
+        }
+
+        .corporate-box::after {
+            content: "";
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            right: -100px;
+            top: -120px;
+            border-radius: 50%;
+            background: var(--purple);
+            filter: blur(120px);
+            opacity: .08;
+        }
+
+        .corporate-content {
+            position: relative;
+            z-index: 2;
+            max-width: 760px;
+        }
+
+        .corporate-content span {
+            color: #a78bfa;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .corporate-content h2 {
+            font-family: "Orbitron", sans-serif;
+            font-size: clamp(30px, 4vw, 48px);
+            line-height: 1.15;
+            margin: 14px 0 18px;
+        }
+
+        .corporate-content p {
+            color: var(--muted);
+            margin-bottom: 28px;
+        }
+
+        .corporate-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+            margin-bottom: 30px;
+        }
+
+        .corporate-features div {
+            border: 1px solid var(--border);
+            background: rgba(255,255,255,.03);
+            padding: 9px 12px;
+            border-radius: 8px;
+            color: #cbd3df;
+            font-size: 11px;
+        }
+
+        /* ================================
+           PROCESS
+        ================================= */
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .process {
+            position: relative;
+            padding: 30px 20px;

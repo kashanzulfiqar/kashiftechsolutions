@@ -1,42 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Kashif Tech Solutions | Custom PCs & Corporate IT Solutions</title>
-
-  <meta
-    name="description"
-    content="Kashif Tech Solutions provides custom gaming PCs, computer components, workstations, PC upgrades and corporate bulk computer solutions."
-  />
-
-  <meta name="theme-color" content="#05070b" />
+  <title>Kashif Tech Solutions | Custom PCs & Corporate Solutions</title>
+  <meta name="description" content="Kashif Tech Solutions - Custom gaming PCs, PC components, workstations, upgrades and corporate bulk orders.">
 
   <style>
-    /* =========================================================
-       KASHIF TECH SOLUTIONS
-       Single-file static website
-       ========================================================= */
-
-    :root {
-      --bg: #05070b;
-      --bg2: #080c13;
-      --card: rgba(14, 19, 29, 0.82);
-      --card2: #0d131e;
-      --text: #f5f7fb;
-      --muted: #9ba7b8;
-      --line: rgba(255, 255, 255, 0.09);
-
-      --blue: #35a7ff;
-      --cyan: #19e6ff;
-      --purple: #8b5cf6;
-      --green: #22c55e;
-
-      --max: 1180px;
-      --radius: 22px;
-    }
-
     * {
       margin: 0;
       padding: 0;
@@ -48,23 +19,10 @@
     }
 
     body {
-      font-family:
-        Inter,
-        ui-sans-serif,
-        system-ui,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        sans-serif;
-
-      color: var(--text);
-      background:
-        radial-gradient(circle at 10% 10%, rgba(25, 230, 255, 0.08), transparent 28%),
-        radial-gradient(circle at 90% 15%, rgba(139, 92, 246, 0.10), transparent 28%),
-        linear-gradient(180deg, #05070b 0%, #070a10 50%, #05070b 100%);
-
-      min-height: 100vh;
-      overflow-x: hidden;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #07090d;
+      color: #ffffff;
+      line-height: 1.6;
     }
 
     a {
@@ -72,1043 +30,1151 @@
       text-decoration: none;
     }
 
-    button,
-    a {
-      -webkit-tap-highlight-color: transparent;
+    img {
+      max-width: 100%;
+      display: block;
     }
 
-    .container {
-      width: min(var(--max), calc(100% - 40px));
-      margin: auto;
+    :root {
+      --blue: #00a8ff;
+      --blue2: #0066ff;
+      --purple: #7c3cff;
+      --dark: #07090d;
+      --card: #10141c;
+      --border: rgba(255,255,255,0.09);
+      --muted: #a6afbd;
     }
 
-    /* Background grid */
-
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: -1;
-
-      background-image:
-        linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
-
-      background-size: 55px 55px;
-      mask-image: linear-gradient(to bottom, black, transparent 80%);
-    }
-
-    /* ================= HEADER ================= */
-
-    header {
+    /* NAVBAR */
+    .navbar {
       position: fixed;
       top: 0;
       left: 0;
-      right: 0;
+      width: 100%;
       z-index: 1000;
-
-      background: rgba(5, 7, 11, 0.72);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-
-      border-bottom: 1px solid rgba(255,255,255,0.06);
+      background: rgba(7,9,13,0.88);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid var(--border);
     }
 
-    .nav {
-      height: 76px;
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 18px 25px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 25px;
     }
 
     .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
+      font-size: 21px;
       font-weight: 900;
-      letter-spacing: -0.5px;
-      white-space: nowrap;
+      letter-spacing: 1px;
     }
 
-    .logo-mark {
-      width: 40px;
-      height: 40px;
-      border-radius: 12px;
-
-      display: grid;
-      place-items: center;
-
-      background:
-        linear-gradient(135deg, var(--cyan), var(--blue) 45%, var(--purple));
-
-      color: #02050a;
-      font-size: 18px;
-
-      box-shadow:
-        0 0 25px rgba(25, 230, 255, 0.22);
+    .logo span {
+      color: var(--blue);
     }
 
-    .logo-text span {
-      color: var(--cyan);
-    }
-
-    nav {
+    .nav-links {
       display: flex;
-      align-items: center;
       gap: 28px;
+      list-style: none;
+      align-items: center;
     }
 
-    nav a {
-      color: #cbd3df;
+    .nav-links a {
+      color: #d9e0e9;
       font-size: 14px;
-      font-weight: 600;
-      transition: 0.25s;
+      transition: 0.3s;
     }
 
-    nav a:hover {
-      color: white;
+    .nav-links a:hover {
+      color: var(--blue);
     }
 
     .nav-button {
-      padding: 11px 17px;
-      border: 1px solid rgba(53,167,255,0.35);
-      border-radius: 12px;
-
-      background: rgba(53,167,255,0.08);
-      color: white;
-
-      transition: 0.25s;
-    }
-
-    .nav-button:hover {
-      background: var(--blue);
-      color: #03101a;
-      border-color: var(--blue);
+      background: linear-gradient(135deg, var(--blue), var(--purple));
+      padding: 10px 17px;
+      border-radius: 8px;
+      color: white !important;
+      font-weight: bold;
     }
 
     .menu {
       display: none;
-      width: 42px;
-      height: 42px;
-
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      background: var(--card);
-
-      color: white;
+      font-size: 28px;
       cursor: pointer;
-      font-size: 20px;
     }
 
-    /* ================= HERO ================= */
-
+    /* HERO */
     .hero {
-      min-height: 820px;
-      padding-top: 150px;
-      padding-bottom: 100px;
-
+      min-height: 100vh;
       display: flex;
       align-items: center;
       position: relative;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 70px;
-      align-items: center;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-
-      padding: 8px 13px;
-      border: 1px solid rgba(25,230,255,0.17);
-      border-radius: 999px;
-
-      background: rgba(25,230,255,0.055);
-      color: #8eefff;
-
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 1.3px;
-      text-transform: uppercase;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 7px;
-      height: 7px;
-      background: var(--cyan);
-      border-radius: 50%;
-      box-shadow: 0 0 15px var(--cyan);
-    }
-
-    h1 {
-      margin-top: 23px;
-
-      font-size: clamp(48px, 6.5vw, 86px);
-      line-height: 0.96;
-      letter-spacing: -4px;
-      font-weight: 950;
-    }
-
-    h1 .gradient {
-      display: block;
-
+      overflow: hidden;
       background:
-        linear-gradient(
-          100deg,
-          #fff 0%,
-          #b7f6ff 30%,
-          #35a7ff 65%,
-          #a78bfa 100%
-        );
-
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
+        radial-gradient(circle at 75% 40%, rgba(0,168,255,0.17), transparent 30%),
+        radial-gradient(circle at 20% 70%, rgba(124,60,255,0.13), transparent 30%),
+        #07090d;
     }
 
-    .hero-text {
-      max-width: 640px;
-      margin-top: 25px;
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: rgba(0,168,255,0.08);
+      filter: blur(100px);
+      right: -150px;
+      top: 100px;
+    }
 
+    .hero-container {
+      width: 100%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 130px 25px 80px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 14px;
+      border: 1px solid rgba(0,168,255,0.3);
+      background: rgba(0,168,255,0.08);
+      color: #55c5ff;
+      border-radius: 50px;
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(44px, 6vw, 78px);
+      line-height: 0.98;
+      letter-spacing: -3px;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 span {
+      color: var(--blue);
+      text-shadow: 0 0 35px rgba(0,168,255,0.25);
+    }
+
+    .hero p {
+      max-width: 650px;
       color: var(--muted);
       font-size: 18px;
-      line-height: 1.75;
+      margin-bottom: 32px;
     }
 
-    .hero-actions {
+    .buttons {
       display: flex;
+      gap: 15px;
       flex-wrap: wrap;
-      gap: 13px;
-      margin-top: 34px;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 9px;
-
-      min-height: 50px;
-      padding: 0 20px;
-
-      border-radius: 13px;
-      font-weight: 800;
-      font-size: 14px;
-
-      transition:
-        transform 0.25s,
-        box-shadow 0.25s,
-        background 0.25s;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
+      padding: 14px 22px;
+      border-radius: 9px;
+      font-weight: bold;
+      transition: 0.3s;
+      border: 1px solid var(--border);
     }
 
     .btn-primary {
-      color: #031018;
-
-      background:
-        linear-gradient(135deg, #74ecff, #35a7ff);
-
-      box-shadow:
-        0 10px 35px rgba(53,167,255,0.22);
+      background: linear-gradient(135deg, var(--blue), var(--blue2));
+      box-shadow: 0 10px 35px rgba(0,168,255,0.2);
     }
 
     .btn-primary:hover {
-      box-shadow:
-        0 14px 45px rgba(53,167,255,0.34);
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(0,168,255,0.35);
     }
 
-    .btn-secondary {
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.035);
-      color: white;
+    .btn-outline {
+      background: rgba(255,255,255,0.03);
     }
 
-    .btn-secondary:hover {
-      background: rgba(255,255,255,0.08);
+    .btn-outline:hover {
+      border-color: var(--blue);
+      color: var(--blue);
     }
 
-    .hero-trust {
+    /* PC VISUAL */
+    .pc-visual {
+      position: relative;
+      height: 470px;
       display: flex;
-      flex-wrap: wrap;
-      gap: 25px;
-      margin-top: 45px;
-      color: #8390a2;
-      font-size: 13px;
+      justify-content: center;
+      align-items: center;
     }
 
-    .hero-trust strong {
-      color: #e8edf5;
-      display: block;
-      margin-bottom: 4px;
-      font-size: 15px;
-    }
-
-    /* ================= PC VISUAL ================= */
-
-    .pc-scene {
-      position: relative;
-      height: 510px;
-
-      display: grid;
-      place-items: center;
-    }
-
-    .glow {
-      position: absolute;
-      width: 380px;
-      height: 380px;
-
-      border-radius: 50%;
-
+    .pc-case {
+      width: 285px;
+      height: 400px;
+      border-radius: 18px;
+      border: 2px solid rgba(0,168,255,0.4);
       background:
-        radial-gradient(
-          circle,
-          rgba(25,230,255,0.20),
-          rgba(139,92,246,0.08) 42%,
-          transparent 70%
-        );
-
-      filter: blur(10px);
-    }
-
-    .pc {
-      width: 300px;
-      height: 410px;
-
-      position: relative;
-      z-index: 2;
-
-      border: 1px solid rgba(255,255,255,0.13);
-      border-radius: 25px;
-
-      background:
-        linear-gradient(
-          135deg,
-          #151c28,
-          #070a10 48%,
-          #111827
-        );
-
+        linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.015)),
+        #0d1118;
       box-shadow:
-        0 40px 80px rgba(0,0,0,0.55),
-        0 0 60px rgba(25,230,255,0.12);
-
-      transform: perspective(900px) rotateY(-9deg) rotateX(3deg);
-    }
-
-    .pc::before {
-      content: "";
-      position: absolute;
-      left: 18px;
-      top: 18px;
-      right: 18px;
-      bottom: 18px;
-
-      border-radius: 17px;
-
-      border: 1px solid rgba(255,255,255,0.08);
-      background:
-        linear-gradient(
-          145deg,
-          rgba(255,255,255,0.035),
-          rgba(0,0,0,0.22)
-        );
+        0 0 70px rgba(0,168,255,0.12),
+        inset 0 0 40px rgba(0,168,255,0.04);
+      position: relative;
+      overflow: hidden;
     }
 
     .glass {
       position: absolute;
-      left: 31px;
-      right: 31px;
-      top: 32px;
-      height: 285px;
-
-      border-radius: 13px;
-
-      background:
-        linear-gradient(
-          125deg,
-          rgba(53,167,255,0.06),
-          rgba(139,92,246,0.10)
-        );
-
+      left: 18px;
+      right: 18px;
+      top: 18px;
+      height: 260px;
+      border-radius: 12px;
       border: 1px solid rgba(255,255,255,0.08);
-      overflow: hidden;
-    }
-
-    .glass::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-
-      background:
-        linear-gradient(
-          120deg,
-          transparent 25%,
-          rgba(255,255,255,0.07) 50%,
-          transparent 75%
-        );
-
-      transform: translateX(-100%);
-      animation: shine 4s infinite;
-    }
-
-    @keyframes shine {
-      60%, 100% {
-        transform: translateX(100%);
-      }
+      background: rgba(0,0,0,0.25);
     }
 
     .fan {
-      position: absolute;
-      width: 73px;
-      height: 73px;
-
+      width: 82px;
+      height: 82px;
       border-radius: 50%;
-
-      border: 3px solid rgba(53,167,255,0.35);
-
-      background:
-        radial-gradient(
-          circle,
-          #19e6ff 0 7px,
-          #17304a 8px 14px,
-          transparent 15px
-        );
-
-      box-shadow:
-        0 0 25px rgba(25,230,255,0.35),
-        inset 0 0 25px rgba(25,230,255,0.15);
+      border: 5px dotted #00bfff;
+      box-shadow: 0 0 25px #008cff;
+      position: absolute;
     }
 
-    .fan:nth-child(1) {
-      top: 22px;
-      left: 24px;
+    .fan.one {
+      top: 55px;
+      right: 35px;
     }
 
-    .fan:nth-child(2) {
-      top: 106px;
-      left: 24px;
+    .fan.two {
+      top: 150px;
+      right: 35px;
     }
 
-    .fan:nth-child(3) {
-      top: 190px;
-      left: 24px;
+    .fan.three {
+      top: 102px;
+      left: 35px;
     }
 
     .gpu {
       position: absolute;
-      right: 20px;
-      top: 93px;
-
+      left: 38px;
+      top: 185px;
       width: 135px;
-      height: 62px;
-
-      border-radius: 8px;
-      border: 1px solid rgba(139,92,246,0.45);
-
-      background:
-        linear-gradient(
-          135deg,
-          #262033,
-          #100e18
-        );
-
-      box-shadow: 0 0 30px rgba(139,92,246,0.16);
+      height: 45px;
+      background: linear-gradient(90deg, #171d27, #303a4a);
+      border: 1px solid #445166;
+      border-radius: 5px;
+      box-shadow: 0 0 18px rgba(0,168,255,0.25);
     }
 
-    .gpu::after {
-      content: "KTS";
+    .light {
       position: absolute;
-      right: 10px;
-      top: 22px;
-
-      font-size: 9px;
-      font-weight: 900;
-      letter-spacing: 2px;
-      color: #bba5ff;
-    }
-
-    .led {
-      position: absolute;
-      left: 35px;
-      right: 35px;
-      bottom: 47px;
-
+      bottom: 0;
+      width: 100%;
       height: 4px;
-      border-radius: 20px;
-
-      background:
-        linear-gradient(
-          90deg,
-          var(--cyan),
-          var(--blue),
-          var(--purple)
-        );
-
-      box-shadow:
-        0 0 18px var(--blue);
+      background: linear-gradient(90deg, transparent, #00a8ff, #7c3cff, transparent);
+      box-shadow: 0 0 20px #00a8ff;
     }
 
-    .pc-label {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 20px;
-
-      text-align: center;
-
-      color: #667286;
-      font-size: 9px;
-      letter-spacing: 4px;
-      font-weight: 900;
-    }
-
-    .floating-card {
-      position: absolute;
-      z-index: 5;
-
-      padding: 15px 17px;
-
-      border: 1px solid var(--line);
-      border-radius: 16px;
-
-      background: rgba(9,13,20,0.84);
-      backdrop-filter: blur(12px);
-
-      box-shadow: 0 20px 50px rgba(0,0,0,0.35);
-    }
-
-    .floating-card.one {
-      top: 55px;
-      right: 5px;
-    }
-
-    .floating-card.two {
-      bottom: 65px;
-      left: 0;
-    }
-
-    .floating-card strong {
-      display: block;
-      font-size: 15px;
-      margin-bottom: 3px;
-    }
-
-    .floating-card small {
-      color: var(--muted);
-    }
-
-    /* ================= SECTIONS ================= */
-
+    /* SECTIONS */
     section {
-      padding: 100px 0;
+      padding: 100px 25px;
     }
 
-    .section-head {
-      max-width: 700px;
-      margin-bottom: 45px;
+    .container {
+      max-width: 1200px;
+      margin: auto;
     }
 
-    .section-kicker {
-      color: var(--cyan);
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: 2px;
+    .section-title {
+      text-align: center;
+      margin-bottom: 55px;
+    }
+
+    .section-title small {
+      color: var(--blue);
       text-transform: uppercase;
-      margin-bottom: 12px;
+      letter-spacing: 3px;
+      font-weight: bold;
     }
 
-    h2 {
-      font-size: clamp(34px, 4vw, 55px);
-      line-height: 1.05;
-      letter-spacing: -2px;
+    .section-title h2 {
+      font-size: clamp(32px, 4vw, 50px);
+      margin-top: 10px;
     }
 
-    .section-head p {
-      margin-top: 15px;
+    .section-title p {
+      max-width: 650px;
+      margin: 15px auto 0;
       color: var(--muted);
-      line-height: 1.7;
-      font-size: 16px;
     }
 
-    /* ================= SERVICES ================= */
-
+    /* SERVICES */
     .services {
+      background: #090c11;
+    }
+
+    .service-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 17px;
+      gap: 20px;
     }
 
-    .service {
-      position: relative;
-      overflow: hidden;
-
-      padding: 28px;
-      min-height: 220px;
-
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-
-      background:
-        linear-gradient(
-          145deg,
-          rgba(255,255,255,0.045),
-          rgba(255,255,255,0.015)
-        );
-
-      transition:
-        transform 0.3s,
-        border-color 0.3s,
-        background 0.3s;
-    }
-
-    .service:hover {
-      transform: translateY(-6px);
-      border-color: rgba(53,167,255,0.32);
-
-      background:
-        linear-gradient(
-          145deg,
-          rgba(53,167,255,0.08),
-          rgba(139,92,246,0.035)
-        );
-    }
-
-    .service-icon {
-      width: 52px;
-      height: 52px;
-
-      display: grid;
-      place-items: center;
-
-      border-radius: 15px;
-
-      background: rgba(53,167,255,0.09);
-      border: 1px solid rgba(53,167,255,0.15);
-
-      font-size: 24px;
-      margin-bottom: 23px;
-    }
-
-    .service h3 {
-      font-size: 20px;
-      margin-bottom: 10px;
-    }
-
-    .service p {
-      color: var(--muted);
-      line-height: 1.65;
-      font-size: 14px;
-    }
-
-    /* ================= PORTFOLIO ================= */
-
-    .portfolio {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .build {
-      min-height: 330px;
-      position: relative;
-      overflow: hidden;
-
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-
-      background: #0a0e15;
-    }
-
-    .build-visual {
-      height: 220px;
-      position: relative;
-      overflow: hidden;
-
-      background:
-        radial-gradient(
-          circle at 50% 50%,
-          rgba(53,167,255,0.25),
-          transparent 40%
-        ),
-        linear-gradient(
-          135deg,
-          #101927,
-          #07090e
-        );
-    }
-
-    .build-visual::before {
-      content: "";
-      position: absolute;
-
-      width: 170px;
-      height: 170px;
-
-      left: 50%;
-      top: 50%;
-
-      transform: translate(-50%, -50%);
-
-      border-radius: 25px;
-
-      border: 2px solid rgba(53,167,255,0.28);
-
-      box-shadow:
-        0 0 50px rgba(53,167,255,0.18),
-        inset 0 0 30px rgba(53,167,255,0.08);
-    }
-
-    .build-visual.purple {
-      background:
-        radial-gradient(
-          circle at 50% 50%,
-          rgba(139,92,246,0.28),
-          transparent 42%
-        ),
-        linear-gradient(135deg,#161124,#07090e);
-    }
-
-    .build-visual.purple::before {
-      border-color: rgba(139,92,246,0.3);
-      box-shadow: 0 0 50px rgba(139,92,246,0.2);
-    }
-
-    .build-visual.cyan {
-      background:
-        radial-gradient(
-          circle at 50% 50%,
-          rgba(25,230,255,0.25),
-          transparent 42%
-        ),
-        linear-gradient(135deg,#07161b,#07090e);
-    }
-
-    .build-visual .mini-pc {
-      position: absolute;
-
-      width: 125px;
-      height: 155px;
-
-      left: 50%;
-      top: 50%;
-
-      transform: translate(-50%, -50%);
-
-      border-radius: 13px;
-      border: 1px solid rgba(255,255,255,0.13);
-
-      background: linear-gradient(145deg,#1a2230,#080b11);
-
-      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-    }
-
-    .mini-pc::after {
-      content: "";
-      position: absolute;
-
-      left: 14px;
-      right: 14px;
-      bottom: 16px;
-
-      height: 3px;
-      border-radius: 10px;
-
-      background:
-        linear-gradient(
-          90deg,
-          var(--cyan),
-          var(--blue),
-          var(--purple)
-        );
-
-      box-shadow: 0 0 15px var(--blue);
-    }
-
-    .build-info {
-      padding: 20px;
-    }
-
-    .build-info h3 {
-      font-size: 19px;
-      margin-bottom: 7px;
-    }
-
-    .build-info p {
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.5;
-    }
-
-    /* ================= CORPORATE ================= */
-
-    .corporate {
-      position: relative;
-      overflow: hidden;
-
-      padding: 60px;
-
-      border-radius: 30px;
-      border: 1px solid rgba(53,167,255,0.18);
-
-      background:
-        radial-gradient(
-          circle at 90% 10%,
-          rgba(139,92,246,0.17),
-          transparent 35%
-        ),
-        radial-gradient(
-          circle at 10% 90%,
-          rgba(25,230,255,0.12),
-          transparent 35%
-        ),
-        #0a1019;
-    }
-
-    .corporate-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 60px;
-      align-items: center;
-    }
-
-    .corporate h2 {
-      max-width: 650px;
-    }
-
-    .corporate p {
-      color: var(--muted);
-      line-height: 1.75;
-      margin-top: 18px;
-      max-width: 650px;
-    }
-
-    .corporate-list {
-      display: grid;
-      gap: 12px;
-      margin-top: 25px;
-    }
-
-    .corporate-list div {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-
-      color: #dce4ef;
-      font-size: 14px;
-    }
-
-    .check {
-      width: 26px;
-      height: 26px;
-      flex: 0 0 26px;
-
-      display: grid;
-      place-items: center;
-
-      border-radius: 50%;
-
-      color: #04120a;
-      background: var(--green);
-
-      font-size: 13px;
-      font-weight: 900;
-    }
-
-    .corporate-card {
+    .service-card {
+      background: linear-gradient(145deg, #111722, #0c1017);
+      border: 1px solid var(--border);
+      border-radius: 16px;
       padding: 30px;
-
-      border: 1px solid var(--line);
-      border-radius: 22px;
-
-      background: rgba(0,0,0,0.18);
+      transition: 0.3s;
     }
 
-    .corporate-card .big-icon {
-      font-size: 48px;
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(0,168,255,0.45);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    }
+
+    .icon {
+      width: 55px;
+      height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,168,255,0.1);
+      border-radius: 12px;
+      font-size: 27px;
       margin-bottom: 20px;
     }
 
-    .corporate-card h3 {
-      font-size: 24px;
+    .service-card h3 {
       margin-bottom: 10px;
+      font-size: 20px;
     }
 
-    .corporate-card p {
-      margin: 0;
+    .service-card p {
+      color: var(--muted);
       font-size: 14px;
     }
 
-    /* ================= ABOUT ================= */
-
-    .about-grid {
+    /* BUILDS */
+    .build-grid {
       display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 65px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .build-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .build-card:hover {
+      transform: translateY(-7px);
+      border-color: rgba(124,60,255,0.5);
+    }
+
+    .build-image {
+      height: 190px;
+      background:
+        radial-gradient(circle at center, rgba(0,168,255,0.2), transparent 45%),
+        linear-gradient(135deg, #111827, #05070a);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 65px;
+    }
+
+    .build-content {
+      padding: 25px;
+    }
+
+    .build-content h3 {
+      margin-bottom: 8px;
+    }
+
+    .build-content p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 5px;
+      background: rgba(0,168,255,0.1);
+      color: #53c5ff;
+      margin-right: 5px;
+    }
+
+    /* CORPORATE */
+    .corporate {
+      background:
+        radial-gradient(circle at 80% 50%, rgba(124,60,255,0.13), transparent 35%),
+        #090c11;
+    }
+
+    .corporate-box {
+      border: 1px solid rgba(0,168,255,0.2);
+      background: linear-gradient(135deg, rgba(0,168,255,0.08), rgba(124,60,255,0.06));
+      border-radius: 22px;
+      padding: 55px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
       align-items: center;
     }
 
-    .about-box {
-      min-height: 350px;
-
-      border-radius: 28px;
-      border: 1px solid var(--line);
-
-      display: grid;
-      place-items: center;
-
-      background:
-        radial-gradient(
-          circle at center,
-          rgba(53,167,255,0.14),
-          transparent 55%
-        ),
-        #080c13;
+    .corporate-box h2 {
+      font-size: 42px;
+      line-height: 1.1;
+      margin-bottom: 20px;
     }
 
-    .about-logo {
-      text-align: center;
-    }
-
-    .about-logo-mark {
-      width: 100px;
-      height: 100px;
-
-      margin: auto auto 20px;
-
-      display: grid;
-      place-items: center;
-
-      border-radius: 28px;
-
-      font-size: 38px;
-      font-weight: 950;
-
-      color: #031018;
-
-      background:
-        linear-gradient(
-          135deg,
-          var(--cyan),
-          var(--blue),
-          var(--purple)
-        );
-
-      box-shadow:
-        0 0 60px rgba(53,167,255,0.2);
-    }
-
-    .about-logo strong {
-      font-size: 20px;
-      letter-spacing: 1px;
-    }
-
-    .about-copy p {
+    .corporate-box p {
       color: var(--muted);
-      line-height: 1.8;
-      margin-top: 17px;
+    }
+
+    .corporate-list {
+      list-style: none;
+    }
+
+    .corporate-list li {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+      color: #dce3ed;
+    }
+
+    .corporate-list li::before {
+      content: "✓";
+      color: var(--blue);
+      font-weight: bold;
+      margin-right: 12px;
+    }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about h2 {
+      font-size: 45px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      color: var(--muted);
+      margin-bottom: 20px;
     }
 
     .stats {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin-top: 30px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
     }
 
     .stat {
-      padding: 20px;
-
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      background: rgba(255,255,255,0.025);
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 25px;
     }
 
     .stat strong {
       display: block;
-      font-size: 25px;
-      color: white;
+      font-size: 30px;
+      color: var(--blue);
     }
 
     .stat span {
-      display: block;
       color: var(--muted);
-      font-size: 12px;
-      margin-top: 4px;
+      font-size: 13px;
     }
 
-    /* ================= CONTACT ================= */
-
+    /* CONTACT */
     .contact {
-      padding-bottom: 120px;
+      background: #090c11;
     }
 
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 18px;
+      gap: 25px;
     }
 
     .contact-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
       padding: 30px;
-
-      border-radius: var(--radius);
-      border: 1px solid var(--line);
-
-      background:
-        linear-gradient(
-          145deg,
-          rgba(255,255,255,0.04),
-          rgba(255,255,255,0.015)
-        );
     }
 
     .contact-card h3 {
-      font-size: 22px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .contact-card p {
       color: var(--muted);
-      line-height: 1.65;
-      margin-bottom: 20px;
-    }
-
-    .representative {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-
-      padding: 17px 0;
-
-      border-top: 1px solid var(--line);
-    }
-
-    .representative:first-of-type {
-      border-top: 0;
-    }
-
-    .rep-name {
-      font-weight: 800;
-    }
-
-    .rep-role {
-      color: var(--muted);
-      font-size: 12px;
-      margin-top: 3px;
+      margin-bottom: 18px;
     }
 
     .phone {
-      color
+      color: var(--blue);
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    /* CTA */
+    .cta {
+      text-align: center;
+      padding: 90px 25px;
+      background:
+        radial-gradient(circle, rgba(0,168,255,0.14), transparent 45%),
+        #07090d;
+    }
+
+    .cta h2 {
+      font-size: clamp(32px, 5vw, 58px);
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      color: var(--muted);
+      margin-bottom: 30px;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 35px 25px;
+      border-top: 1px solid var(--border);
+      background: #05070a;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+    }
+
+    footer p {
+      color: #798392;
+      font-size: 13px;
+    }
+
+    .facebook {
+      color: #55c5ff;
+    }
+
+    /* WHATSAPP */
+    .whatsapp {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #25d366;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 27px;
+      z-index: 999;
+      box-shadow: 0 8px 30px rgba(37,211,102,0.35);
+      transition: 0.3s;
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.1);
+    }
+
+    /* MOBILE */
+    @media (max-width: 850px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        width: 100%;
+        padding: 20px 25px;
+        background: #080b10;
+        flex-direction: column;
+        align-items: flex-start;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu {
+        display: block;
+      }
+
+      .hero-container,
+      .corporate-box,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-container {
+        padding-top: 120px;
+        text-align: center;
+      }
+
+      .hero p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .buttons {
+        justify-content: center;
+      }
+
+      .pc-visual {
+        height: 420px;
+      }
+
+      .service-grid,
+      .build-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .corporate-box {
+        padding: 35px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .hero h1 {
+        font-size: 46px;
+      }
+
+      .service-grid,
+      .build-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pc-case {
+        transform: scale(0.85);
+      }
+
+      .about h2,
+      .corporate-box h2 {
+        font-size: 34px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="navbar">
+    <div class="nav-container">
+
+      <a href="#home" class="logo">
+        KASHIF <span>TECH</span> SOLUTIONS
+      </a>
+
+      <div class="menu" onclick="toggleMenu()">☰</div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#builds">Builds</a></li>
+        <li><a href="#corporate">Corporate</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact" class="nav-button">Contact Us</a></li>
+      </ul>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-container">
+
+      <div>
+        <div class="badge">CUSTOM PC • GAMING • CORPORATE SOLUTIONS</div>
+
+        <h1>
+          BUILD YOUR<br>
+          <span>DREAM PC.</span>
+        </h1>
+
+        <p>
+          Kashif Tech Solutions provides custom gaming PCs,
+          premium computer components, powerful workstations,
+          upgrades and professional corporate computer solutions.
+        </p>
+
+        <div class="buttons">
+          <a class="btn btn-primary" href="#contact">
+            Get a Custom Quote
+          </a>
+
+          <a class="btn btn-outline" href="#builds">
+            Explore Builds
+          </a>
+        </div>
+      </div>
+
+
+      <!-- CSS PC -->
+      <div class="pc-visual">
+        <div class="pc-case">
+
+          <div class="glass">
+            <div class="fan one"></div>
+            <div class="fan two"></div>
+            <div class="fan three"></div>
+            <div class="gpu"></div>
+          </div>
+
+          <div class="light"></div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="container">
+
+      <div class="section-title">
+        <small>What We Do</small>
+        <h2>Technology Built Around You</h2>
+        <p>
+          From gaming machines to professional business systems,
+          we help you choose the right hardware for your needs.
+        </p>
+      </div>
+
+      <div class="service-grid">
+
+        <div class="service-card">
+          <div class="icon">🎮</div>
+          <h3>Gaming PCs</h3>
+          <p>
+            High-performance gaming PCs configured for smooth
+            gameplay, streaming and competitive gaming.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon">🖥️</div>
+          <h3>Custom PC Builds</h3>
+          <p>
+            Fully customized systems based on your budget,
+            performance requirements and future upgrade plans.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon">⚙️</div>
+          <h3>PC Components</h3>
+          <p>
+            Processors, graphics cards, RAM, SSDs, motherboards,
+            power supplies, cases and other computer hardware.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon">💼</div>
+          <h3>Workstations</h3>
+          <p>
+            Powerful systems for design, development, rendering,
+            engineering, productivity and professional workloads.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon">🔧</div>
+          <h3>Upgrades</h3>
+          <p>
+            Upgrade your existing computer with better storage,
+            memory, graphics and processing performance.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon">🏢</div>
+          <h3>Corporate Solutions</h3>
+          <p>
+            Computer systems and components for offices,
+            businesses, institutions and bulk requirements.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- BUILDS -->
+  <section id="builds">
+    <div class="container">
+
+      <div class="section-title">
+        <small>Our Portfolio</small>
+        <h2>Custom Builds</h2>
+        <p>
+          Tell us your budget and requirements and we can
+          configure a system around your needs.
+        </p>
+      </div>
+
+      <div class="build-grid">
+
+        <div class="build-card">
+          <div class="build-image">🎮</div>
+          <div class="build-content">
+            <h3>Starter Gaming</h3>
+            <p>
+              An affordable gaming-focused configuration
+              designed for everyday gaming and entertainment.
+            </p>
+            <span class="tag">Gaming</span>
+            <span class="tag">1080p</span>
+          </div>
+        </div>
+
+        <div class="build-card">
+          <div class="build-image">⚡</div>
+          <div class="build-content">
+            <h3>Performance Gaming</h3>
+            <p>
+              A balanced high-performance system for demanding
+              games, streaming and content creation.
+            </p>
+            <span class="tag">Performance</span>
+            <span class="tag">Gaming</span>
+          </div>
+        </div>
+
+        <div class="build-card">
+          <div class="build-image">🔥</div>
+          <div class="build-content">
+            <h3>Enthusiast Build</h3>
+            <p>
+              Premium hardware for users who want maximum
+              performance and a powerful custom setup.
+            </p>
+            <span class="tag">High-End</span>
+            <span class="tag">Custom</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CORPORATE -->
+  <section class="corporate" id="corporate">
+    <div class="container">
+
+      <div class="corporate-box">
+
+        <div>
+          <small style="color:#00a8ff; font-weight:bold; letter-spacing:2px;">
+            CORPORATE & BULK ORDERS
+          </small>
+
+          <h2>
+            Technology Solutions For Your Business
+          </h2>
+
+          <p>
+            We also deal in corporate orders and bulk computer
+            requirements. Whether you need systems for an office,
+            company, school, organization or project, we can help
+            configure the right hardware for your requirements.
+          </p>
+
+          <br>
+
+          <a href="#contact" class="btn btn-primary">
+            Request Corporate Quote
+          </a>
+        </div>
+
+        <div>
+          <ul class="corporate-list">
+            <li>Bulk PC & workstation orders</li>
+            <li>Office computer systems</li>
+            <li>Corporate hardware requirements</li>
+            <li>Custom configurations</li>
+            <li>PC components in quantity</li>
+            <li>Professional hardware guidance</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+
+      <div class="about-grid">
+
+        <div>
+          <div class="section-title" style="text-align:left; margin-bottom:20px;">
+            <small>About Us</small>
+          </div>
+
+          <h2>
+            Performance.<br>
+            Quality. <span style="color:#00a8ff;">Solutions.</span>
+          </h2>
+
+          <p>
+            Kashif Tech Solutions specializes in custom-built
+            computers, gaming systems, computer components and
+            professional technology solutions.
+          </p>
+
+          <p>
+            Our goal is simple: understand what you need and
+            help you build or source the right system for the job.
+          </p>
+
+          <a
+            href="https://www.facebook.com/p/Gaming-PC-Zone-61554983427077/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-outline"
+          >
+            Visit Our Gaming PC Zone
+          </a>
+        </div>
+
+        <div class="stats">
+
+          <div class="stat">
+            <strong>01</strong>
+            <span>Custom PC Builds</span>
+          </div>
+
+          <div class="stat">
+            <strong>02</strong>
+            <span>Gaming Solutions</span>
+          </div>
+
+          <div class="stat">
+            <strong>03</strong>
+            <span>Corporate Orders</span>
+          </div>
+
+          <div class="stat">
+            <strong>04</strong>
+            <span>Hardware Solutions</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+
+      <div class="section-title">
+        <small>Get In Touch</small>
+        <h2>Let's Build Something Powerful</h2>
+        <p>
+          Contact us for custom PC builds, components,
+          upgrades or corporate requirements.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+
+        <div class="contact-card">
+          <h3>Kashan Zulfiqar</h3>
+          <p>Representative — Kashif Tech Solutions</p>
+
+          <a
+            class="phone"
+            href="tel:+923343465500"
+          >
+            0334 3465500
+          </a>
+
+          <br><br>
+
+          <a
+            class="btn btn-primary"
+            href="https://wa.me/923343465500"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WhatsApp Kashan
+          </a>
+        </div>
+
+
+        <div class="contact-card">
+          <h3>Kashif</h3>
+          <p>Representative — Kashif Tech Solutions</p>
+
+          <a
+            class="phone"
+            href="tel:+923449350866"
+          >
+            0344 9350866
+          </a>
+
+          <br><br>
+
+          <a
+            class="btn btn-primary"
+            href="https://wa.me/923449350866"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WhatsApp Kashif
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CTA -->
+  <section class="cta">
+
+    <div class="container">
+
+      <h2>Ready To Build Your PC?</h2>
+
+      <p>
+        Tell us your budget, requirements and performance goals.
+      </p>
+
+      <div class="buttons">
+
+        <a
+          href="https://wa.me/9233449350866?text=Hello%20Kashif%20Tech%20Solutions%2C%20I%20would%20like%20a%20custom%20PC%20quote."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-primary"
+        >
+          WhatsApp For A Quote
+        </a>
+
+        <a href="#contact" class="btn btn-outline">
+          Contact Us
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-inner">
+
+      <div>
+        <strong>KASHIF <span style="color:#00a8ff;">TECH</span> SOLUTIONS</strong>
+        <p>Custom PCs • Gaming • Components • Corporate Solutions</p>
+      </div>
+
+      <a
+        class="facebook"
+        href="https://www.facebook.com/p/Gaming-PC-Zone-61554983427077/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Gaming PC Zone on Facebook →
+      </a>
+
+      <p>
+        © 2026 Kashif Tech Solutions. All rights reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- FLOATING WHATSAPP -->
+  <a
+    class="whatsapp"
+    href="https://wa.me/923449350866?text=Hello%20Kashif%20Tech%20Solutions%2C%20I%20want%20to%20know%20about%20your%20PC%20builds."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="WhatsApp"
+  >
+    ☎
+  </a>
+
+
+  <!-- JAVASCRIPT -->
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      nav.classList.toggle("active");
+    }
+
+    document.querySelectorAll(".nav-links a").forEach(function(link) {
+      link.addEventListener("click", function() {
+        document.getElementById("navLinks").classList.remove("active");
+      });
+    });
+  </script>
+
+</body>
+</html>
